@@ -1,0 +1,37 @@
+<div nz-row [nzGutter]="{ xs: 120, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }" nzAlign="middle">
+    <div class="home-menu" nz-col [nzLg]="{ span: 6, offset: 2, order: 1 }" [nzSm]="{ span: 16, offset: 4, order: 2 }" [nzXs]="{ span: 24, order: 2 }">
+        <h1>{{ 'APP.Title' | translate }}</h1>
+        <span>{{ 'APP.Description' | translate }}</span>
+
+        <nz-divider></nz-divider>
+
+        <nz-space nzDirection="vertical" nzSize="large">
+            <nz-space-item>
+                <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
+                    <input type="text" nz-input placeholder="{{ 'HOMEPAGE_CARD.Tracker_input_placeholder' | translate }}" />
+                </nz-input-group>
+                <ng-template #suffixButton>
+                    <button nz-button nzType="default" nzSize="large" nzSearch>{{ 'HOMEPAGE_CARD.Tracker_input_button' | translate }}</button>
+                </ng-template>
+            </nz-space-item>
+                <button nz-button nzType="primary" nzBlock>{{ 'HOMEPAGE_CARD.Create_tracker' | translate }}</button>
+        </nz-space>
+
+        <nz-divider></nz-divider>
+
+        <nz-space nzDirection="vertical" nzSize="large">
+            <nz-space-item>
+                <button nz-button nzType="primary" nzBlock disabled>{{ 'HOMEPAGE_CARD.Lost_actions' | translate }} (WIP)</button>
+            </nz-space-item>
+            <nz-space-item>
+                <button nz-button nzType="primary" nzBlock disabled>{{ 'HOMEPAGE_CARD.Wiki' | translate }} (WIP)</button>
+            </nz-space-item>
+        </nz-space>
+    </div>
+
+    <!--
+    <div class="branding" nz-col [nzLg]="{ span: 12, offset: 4, order: 2 }" [nzSm]="{ span: 16, offset: 4, order: 1 }" [nzXs]="{ span: 24, order: 1 }">
+        <h1>{{ 'APP.Title' | translate }}</h1>
+    </div>
+    -->
+</div>

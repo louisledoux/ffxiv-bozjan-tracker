@@ -4,6 +4,15 @@
 
 export const environment = {
   production: false,
+  firebase: {
+    apiKey: "AIzaSyBIG7kisEKxI_TStpBKXx_y8Y4FDinxX6g",
+    authDomain: "ffxiv-bozjan-tracker.firebaseapp.com",
+    databaseURL: "https://ffxiv-bozjan-tracker.firebaseio.com",
+    projectId: "ffxiv-bozjan-tracker",
+    storageBucket: "ffxiv-bozjan-tracker.appspot.com",
+    messagingSenderId: "565662065452",
+    appId: "1:565662065452:web:2fdc0c0edc02f784bac289"
+  }
 };
 
 /*

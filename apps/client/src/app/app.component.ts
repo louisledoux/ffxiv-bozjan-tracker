@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '@ffxiv-bozjan-tracker/api-interfaces';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'ffxiv-bozjan-tracker-root',
@@ -8,6 +8,7 @@ import { Message } from '@ffxiv-bozjan-tracker/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+  }
 }

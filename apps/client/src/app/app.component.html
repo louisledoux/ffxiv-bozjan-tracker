@@ -1,8 +1,23 @@
-<div style="text-align: center;">
-  <h1>Welcome to client!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-  />
-</div>
-<div>Message: {{ hello$ | async | json }}</div>
+<nz-layout>
+  <nz-content class="outer-content">
+    <div class="spacer"></div>
+    <nz-layout class="inner-layout">
+      <nz-content class="inner-content">
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-content>
+  <nz-footer>
+    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
+      <div nz-col nzXs="24" nzLg="8">
+        FINAL FANTASY XIV ©2010 - 2020 SQUARE ENIX CO., LTD. FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd. All material used under license.
+      </div>
+      <div nz-col nzXs="24" nzLg="8">
+        Heavily inspired by <a>https://ffxiv-eureka.com</a>
+      </div>
+      <div nz-col nzXs="24" nzLg="8">
+        Version: 0.1
+      </div>
+    </div>
+  </nz-footer>
+</nz-layout>

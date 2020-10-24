@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ffxiv-bozjan-tracker": {
+      "hosting": {
+        "client": [
+          "ffxiv-bozjan-tracker"
+        ]
+      }
+    }
+  }
+}
