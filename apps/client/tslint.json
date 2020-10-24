@@ -1,0 +1,20 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "ffxivBozjanTracker",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ffxiv-bozjan-tracker",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
+  }
+}
