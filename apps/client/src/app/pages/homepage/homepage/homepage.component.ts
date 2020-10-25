@@ -12,20 +12,35 @@ export class HomepageComponent {
   public searchedTrackerId: string;
   public doesntExist: boolean;
 
+  private trackerId:string;
+
   constructor(private firestore: AngularFirestore, private router: Router) {}
 
-  createTracker() {
-    const trackerId = this.firestore.createId();
+  private randomIdGenerator(length) {
+    let result = "";
+
+    const characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    const charactersLength = characters.length;
+
+    for(let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    this.trackerId = result;
+  }
+
+  async createTracker() {
+    await this.randomIdGenerator(6);
 
     return new Promise<any>((resolve, reject) => {
       this.firestore
       .collection('trackers')
-      .doc(trackerId)
+      .doc(this.trackerId)
       .set({
         respawnDate: new Date(Date.now() + 60*60*1000)
       })
       .then(res => {
-        this.router.navigate(['./tracker', trackerId])
+        this.router.navigate(['./tracker', this.trackerId])
       }, err => reject(err));
     });
   }

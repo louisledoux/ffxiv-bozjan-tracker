@@ -1,6 +1,7 @@
 import { AfterContentInit, Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute, Params } from '@angular/router';
+import { NzMessageService } from 'ng-zorro-antd/message';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -17,9 +18,10 @@ export class TrackerComponent implements OnInit, AfterContentInit {
 
   public trackerId: string;
 
+  public lastSpawnTime = 0;
   public endDate$: Observable<number>;
 
-  constructor(private route: ActivatedRoute, private firestore: AngularFirestore) {
+  constructor(private route: ActivatedRoute, private firestore: AngularFirestore, private message: NzMessageService) {
   }
 
   ngOnInit() {
@@ -53,7 +55,7 @@ export class TrackerComponent implements OnInit, AfterContentInit {
       .collection('trackers')
       .doc(this.trackerId)
       .set({
-        respawnDate: new Date(Date.now() + 60*60*1000)
+        respawnDate: new Date(Date.now() + 60*60*1000 - 60*this.lastSpawnTime*1000)
       })
       .then(res => {
         this.firestore.collection('trackers').doc(this.trackerId).ref.get()
@@ -62,6 +64,9 @@ export class TrackerComponent implements OnInit, AfterContentInit {
           })
         this.isVisible = false;
         this.isConfirmLoading = false;
+        this.lastSpawnTime = 0;
+
+        this.message.info('Timer Reset successful !');
       }, err => reject(err));
     });
   }

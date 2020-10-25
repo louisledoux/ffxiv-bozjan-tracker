@@ -1,4 +1,4 @@
-<div nz-row [nzGutter]="{ xs: 120, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }" nzAlign="middle">
+<div nz-row [nzGutter]="{ xs: 120, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }" nzAlign="top">
     <div class="tracker-module" nz-col [nzLg]="{ span: 6, offset: 2 }" [nzSm]="{ span: 16, offset: 4 }" [nzXs]="{ span: 24 }">
         <h1><a routerLink="">{{ 'APP.Title' | translate }}</a></h1>
         <h2>{{ 'TRACKER.Title' | translate }}</h2>
@@ -7,9 +7,8 @@
         <nz-divider></nz-divider>
 
         <nz-space nzDirection="vertical" nzSize="large">
-            <nz-space-item>
-                <span>{{ 'TRACKER.Time_before_respawn' | translate }}: <countdown [config]="{ stopTime: endDate$ }" ></countdown></span>
-            </nz-space-item>
+            <span>{{ 'TRACKER.Time_before_respawn' | translate }}:</span>
+            <p class="timer"><strong><countdown [config]="{ stopTime: endDate$, format: 'mm:ss' }" ></countdown></strong></p>
             <nz-space-item>
                 <button nz-button [nzType]="'danger'" nzBlock (click)="showResetModal()">{{ 'TRACKER.Reset' | translate }}</button>
             </nz-space-item>
@@ -20,14 +19,16 @@
                 [nzFooter]="resetModalFooter"
                 (nzOnCancel)="handleCancel()"
             >
-                {{ 'TRACKER_CONFIRM.Description' | translate }}
+                <p>{{ 'TRACKER_CONFIRM.Description' | translate }}</p>
+                <p><nz-input-number [(ngModel)]="lastSpawnTime" [nzMin]="1" [nzMax]="60" [nzStep]="1"></nz-input-number>&nbsp; <span>Minutes Ago</span></p>
+                <p><strong>{{ 'TRACKER_CONFIRM.Warning' | translate }}</strong></p>
             </nz-modal>
             <ng-template #resetModalTitle>
                 <strong>{{ 'TRACKER_CONFIRM.Title' | translate }}</strong>
             </ng-template>
             <ng-template #resetModalFooter>
                 <button nz-button nzType="default" (click)="handleCancel()">{{ 'TRACKER_CONFIRM.Cancel_text' | translate }}</button>
-                <button nz-button nzType="danger" (click)="handleReset()" [nzLoading]="isConfirmLoading">{{ 'TRACKER_CONFIRM.Ok_text' | translate }}</button>
+                <button nz-button nzType="primary" (click)="handleReset()" [nzLoading]="isConfirmLoading">{{ 'TRACKER_CONFIRM.Ok_text' | translate }}</button>
             </ng-template>
         </nz-space>
     </div>
