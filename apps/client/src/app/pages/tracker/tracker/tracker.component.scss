@@ -1,8 +1,10 @@
-.tracker-module {
+.tracker-module, .tracker-description {
     background: white;
     border-radius: 5px;
     padding: 20px;
-    
+}
+
+.tracker-module {
     text-align: center;
 }
 
@@ -10,6 +12,12 @@
     .ant-col {
         padding-left: 20px !important;
         padding-right: 20px !important;
+    }
+}
+
+@media screen and ( max-width: 959px ) {
+    .ant-col {
+        margin-bottom: 20px;
     }
 }
 

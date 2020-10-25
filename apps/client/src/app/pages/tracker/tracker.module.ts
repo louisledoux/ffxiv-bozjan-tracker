@@ -8,7 +8,8 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzModalModule } from 'ng-zorro-antd/modal';
-
+import { NzListModule } from 'ng-zorro-antd/list';
+import { CountdownModule } from 'ngx-countdown';
 
 const routes: Routes = [{
   path: '',
@@ -26,6 +27,9 @@ const routes: Routes = [{
     NzSpaceModule,
     NzButtonModule,
     NzModalModule,
+    NzListModule,
+
+    CountdownModule,
 
     RouterModule.forChild(routes)
   ]

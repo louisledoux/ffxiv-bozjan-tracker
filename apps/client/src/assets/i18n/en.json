@@ -9,7 +9,8 @@
         "Tracker_input_button": "Enter",
         "Create_tracker": "Create a new Castrum Tracker",
         "Lost_actions": "Lost Actions",
-        "Wiki": "Wiki & Tips"
+        "Wiki": "Wiki & Tips",
+        "Join_error": "Error: This tracker doesn't exist"
     },
 
     "TRACKER": {
@@ -24,5 +25,11 @@
         "Description": "Are you sure you want to reset the timer? This action can't be reversed!",
         "Ok_text": "Confirm",
         "Cancel_text": "Cancel"
+    },
+
+    "TRACKER_DESCRIPTION": {
+        "Title": "Castrum Respawn Rules",
+        "New_instance": "If the instance is new, the Castrum timer will initialize once 30 players from Level 10+ are inside the instance. From then, it'll take an hour for the Castrum to pop.",
+        "Respawn_rule": "The Castrum timer will reset ONLY when the ongoing Castrum is fully finished. From then you can reset the timer :)"
     }
 }
