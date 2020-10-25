@@ -14,4 +14,7 @@ nz-content {
 
 h1 {
     font-family: 'Oxygen', sans-serif;
+    a, a:hover, a:visited {
+        color: rgba(0, 0, 0, 0.85);
+    }
 }

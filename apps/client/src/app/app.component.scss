@@ -31,3 +31,13 @@ nz-footer {
   color: white;
   background-color: #001529;
 }
+
+@media screen and ( min-width: 960px ) {
+  .right {
+      text-align: right;
+  }
+
+  .center {
+    text-align: center;
+  }
+}

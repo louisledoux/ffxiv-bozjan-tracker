@@ -1,13 +1,14 @@
 <div nz-row [nzGutter]="{ xs: 120, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }" nzAlign="middle">
-    <div class="tracker-module" nz-col [nzLg]="{ span: 6, offset: 2, order: 1 }" [nzSm]="{ span: 16, offset: 4, order: 2 }" [nzXs]="{ span: 24, order: 2 }">
-        <h1>{{ 'TRACKER.Title' | translate }}</h1>
-        <span>{{ 'TRACKER.ID_name' | translate }} : ID</span>
+    <div class="tracker-module" nz-col [nzLg]="{ span: 6, offset: 2 }" [nzSm]="{ span: 16, offset: 4 }" [nzXs]="{ span: 24 }">
+        <h1><a routerLink="">{{ 'APP.Title' | translate }}</a></h1>
+        <h2>{{ 'TRACKER.Title' | translate }}</h2>
+        <span>{{ 'TRACKER.ID_name' | translate }} : {{ this.trackerId }}</span>
 
         <nz-divider></nz-divider>
 
         <nz-space nzDirection="vertical" nzSize="large">
             <nz-space-item>
-                <span>{{ 'TRACKER.Time_before_respawn' | translate }} : 「time」</span>
+                <span>{{ 'TRACKER.Time_before_respawn' | translate }}: <countdown [config]="{ stopTime: endDate$ }" ></countdown></span>
             </nz-space-item>
             <nz-space-item>
                 <button nz-button [nzType]="'danger'" nzBlock (click)="showResetModal()">{{ 'TRACKER.Reset' | translate }}</button>
@@ -29,5 +30,17 @@
                 <button nz-button nzType="danger" (click)="handleReset()" [nzLoading]="isConfirmLoading">{{ 'TRACKER_CONFIRM.Ok_text' | translate }}</button>
             </ng-template>
         </nz-space>
+    </div>
+
+    <div class="tracker-description" nz-col [nzLg]="{ span: 12, offset: 2 }" [nzSm]="{ span: 16, offset: 4 }" [nzXs]="{ span: 24 }">
+        <h2>{{ 'TRACKER_DESCRIPTION.Title' | translate }}</h2>
+        <nz-list nzSize="large" nzBordered>
+            <nz-list-item>
+                {{ 'TRACKER_DESCRIPTION.New_instance' | translate }}
+            </nz-list-item>
+            <nz-list-item>
+                {{ 'TRACKER_DESCRIPTION.Respawn_rule' | translate }}
+            </nz-list-item>
+        </nz-list>
     </div>
 </div>
