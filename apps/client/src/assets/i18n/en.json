@@ -14,7 +14,7 @@
     },
 
     "TRACKER": {
-        "Title": "Castrum Lacum Licore Tracker",
+        "Title": "Castrum Lacus Litore Tracker",
         "ID_name" : "Tracker ID",
         "Time_before_respawn": "Time left before next Castrum spawn",
         "Reset": "Reset the Timer"
@@ -29,7 +29,7 @@
 
     "TRACKER_DESCRIPTION": {
         "Title": "Castrum Respawn Rules",
-        "New_instance": "If the instance is new, the Castrum timer will initialize once 30 players from Level 10+ are inside the instance. From then, it'll take an hour for the Castrum to pop.",
+        "New_instance": "Castrum pop is every hour. If the instance is new, the Castrum will pop one hour after the beginning of the instance.",
         "Respawn_rule": "The Castrum timer will reset ONLY when the ongoing Castrum is fully finished. From then you can reset the timer :)"
     }
 }
