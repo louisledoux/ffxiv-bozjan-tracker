@@ -22,7 +22,11 @@
 }
 
 @media screen and ( min-width: 960px ) {
-    .ant-row {
+    .ant-col {
         margin-top: 10vh;
     }
+}
+
+p.timer {
+    font-size: large;
 }
