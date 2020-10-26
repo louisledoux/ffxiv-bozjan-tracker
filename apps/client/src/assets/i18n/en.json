@@ -23,6 +23,7 @@
     "TRACKER_CONFIRM": {
         "Title": "Reset Castrum Timer",
         "Description": "When did the last Castrum finished?",
+        "Minutes": "Minutes ago",
         "Warning": "This action cannot be reversed!",
         "Ok_text": "Confirm",
         "Cancel_text": "Cancel"

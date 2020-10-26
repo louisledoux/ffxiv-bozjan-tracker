@@ -4,6 +4,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { Observable } from 'rxjs';
 
+import { Timer } from '../../../model/common/timer';
+
 @Component({
   selector: 'ffxiv-bozjan-tracker-tracker',
   templateUrl: './tracker.component.html',
@@ -31,11 +33,12 @@ export class TrackerComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit() {
-    this.firestore.collection('trackers').doc(this.trackerId).ref.get()
-      .then((doc) => {
-        if (doc.exists) {
-          if (doc.data().respawnDate.toDate().getTime() > new Date().getTime()) {
-            this.endDate$ = doc.data().respawnDate.toDate().getTime();
+    this.firestore.collection('trackers').doc<Timer>(this.trackerId).valueChanges()
+      .subscribe(data => {
+        if (data) {
+          const trackerData = data;
+          if (trackerData.respawnDate.toDate().getTime() > new Date().getTime()) {
+            this.endDate$ = trackerData.respawnDate.toDate().getTime();
           }
         } else {
           this.triggerAlertModal = true;
