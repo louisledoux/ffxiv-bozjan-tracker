@@ -8,7 +8,10 @@
 
         <nz-space nzDirection="vertical" nzSize="large">
             <span>{{ 'TRACKER.Time_before_respawn' | translate }}:</span>
-            <p class="timer"><strong><countdown [config]="{ stopTime: endDate$, format: 'mm:ss' }" ></countdown></strong></p>
+            <p class="timer"><strong><countdown #timer [config]="{ stopTime: endDate$, format: 'mm:ss', notify: [300] }" (event)="triggerAlertSound($event)" ></countdown></strong></p>
+            <nz-space-item>
+                <label nz-checkbox [(ngModel)]="isSoundActive">{{ 'TRACKER.Sound_alert' | translate }}</label>
+            </nz-space-item>
             <nz-space-item>
                 <button nz-button [nzType]="'danger'" nzBlock (click)="showResetModal()">{{ 'TRACKER.Reset' | translate }}</button>
             </nz-space-item>
@@ -20,7 +23,7 @@
                 (nzOnCancel)="handleCancel()"
             >
                 <p>{{ 'TRACKER_CONFIRM.Description' | translate }}</p>
-                <p><nz-input-number [(ngModel)]="lastSpawnTime" [nzMin]="1" [nzMax]="60" [nzStep]="1"></nz-input-number>&nbsp; <span>Minutes Ago</span></p>
+                <p><nz-input-number [(ngModel)]="lastSpawnTime" [nzMin]="1" [nzMax]="60" [nzStep]="1"></nz-input-number>&nbsp; <span>{{ 'TRACKER_CONFIRM.Minutes' | translate }}</span></p>
                 <p><strong>{{ 'TRACKER_CONFIRM.Warning' | translate }}</strong></p>
             </nz-modal>
             <ng-template #resetModalTitle>

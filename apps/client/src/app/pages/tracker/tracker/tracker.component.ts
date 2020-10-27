@@ -17,6 +17,7 @@ export class TrackerComponent implements OnInit, AfterContentInit {
   public isConfirmLoading = false;
 
   public triggerAlertModal = false;
+  public isSoundActive = false;
 
   public trackerId: string;
 
@@ -48,6 +49,15 @@ export class TrackerComponent implements OnInit, AfterContentInit {
 
   showResetModal(): void {
     this.isVisible = true;
+  }
+
+  triggerAlertSound(event) {
+    if(event.action === "notify" && this.isSoundActive) {
+      const alertSound = new Audio();
+      alertSound.src = '../../../../assets/audio/Feature_unlocked.mp3';
+      alertSound.load();
+      alertSound.play();
+    } 
   }
 
   handleReset() {

@@ -10,6 +10,7 @@
         "Create_tracker": "Create a new Castrum Tracker",
         "Lost_actions": "Lost Actions",
         "Wiki": "Wiki & Tips",
+        "Weather": "Bozjan Weather",
         "Join_error": "Error: This tracker doesn't exist"
     },
 
@@ -17,6 +18,7 @@
         "Title": "Castrum Lacus Litore Tracker",
         "ID_name" : "Tracker ID",
         "Time_before_respawn": "Time left before next Castrum spawn",
+        "Sound_alert": "Alert me 5 minutes before",
         "Reset": "Reset the Timer"
     },
 
