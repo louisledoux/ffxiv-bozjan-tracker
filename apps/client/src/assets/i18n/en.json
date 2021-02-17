@@ -7,11 +7,43 @@
     "HOMEPAGE_CARD": {
         "Tracker_input_placeholder" : "Enter Tracker ID",
         "Tracker_input_button": "Enter",
-        "Create_tracker": "Create a new Castrum Tracker",
+        "Create_tracker": "Create a new Bozjan Tracker",
         "Lost_actions": "Lost Actions",
         "Wiki": "Wiki & Tips",
         "Weather": "Bozjan Weather",
         "Join_error": "Error: This tracker doesn't exist"
+    },
+
+    "STARMOBS": {
+        "TIDEBORN": {
+            "Name": "Tideborn Angel"
+        },
+        "FERN": {
+            "Name": "Fern Flower"
+        },
+        "CLAW": {
+            "Name": "Ink Claw"
+        },
+        "PSOGLAV": {
+            "Name": "Psoglav"
+        },
+        "VIY": {
+            "Name": "Viy"
+        },
+        "SMOK": {
+            "Name": "Smok"
+        },
+        "PATTY": {
+            "Name": "Patty"
+        },
+        "CLARE": {
+            "Name": "Clingy Clare"
+        },
+        "BARATHRUM": {
+            "Name": "Bird of Barathrum"
+        },
+        "RespawnText": "Next respawn in:",
+        "Reset": "Reset"
     },
 
     "TRACKER": {
@@ -32,8 +64,36 @@
     },
 
     "TRACKER_DESCRIPTION": {
-        "Title": "Castrum Respawn Rules",
+        "Rules_tab": "Castrum Respawn Rules",
+        "Guide_tab": "Castrum Guide",
+        "Map_tab": "Bozjan Map",
         "New_instance": "Castrum pop is every hour. If the instance is new, the Castrum will pop one hour after the beginning of the instance.",
         "Respawn_rule": "The Castrum timer will reset ONLY when the ongoing Castrum is fully finished. From then you can reset the timer :)"
+    },
+
+    "LOST_ACTIONS_PREFIX": {
+        "Title": "Title",
+        "Type": "Type",
+        "Range": "Range",
+        "Radius": "Radius",
+        "Cast": "Cast",
+        "Recast": "Recast",
+        "Available": "Available",
+        "Description": "Description",
+        "Affinity": "Affinity"
+    },
+
+    "LOST_ACTIONS_LIST": {
+        "1": {
+            "Title": "Lost Focus",
+            "Type": "Ability",
+            "Range": "0y",
+            "Radius": "0y",
+            "Cast": "Instant",
+            "Recast": "2.50s",
+            "Available": "32",
+            "Description": "<p>Grant a stack of <div class='yellow'>Boost<div>, up to a maximum of 16.</p><p><div class='green'>Boost Bonus:</div> Increase potency of next weapon skill by 15% per stack.</p><p><div class='green'>Duration: 30s</div></p><p>Effect ends upon using another lost action.<br>Shares a recast timer with all other weaponskills and spells.</p>",
+            "Affinity": ["PLD", "MNK", "WAR", "DRG", "BRD", "WHM", "BLM", "SMN", "SCH", "NIN", "MCH", "DRK", "AST", "SAM", "RDM", "GNB", "DNC"]
+        }
     }
 }

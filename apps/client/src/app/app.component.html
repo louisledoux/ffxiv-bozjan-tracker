@@ -1,6 +1,11 @@
 <nz-layout>
+  <nz-header>
+    <a routerLink="">
+      <img src="assets/img/bozjan-tracker-logo.png" alt="logo" class="brand-logo" />
+      <h1 class="logo">{{ 'APP.Title' | translate }}</h1>
+    </a>
+  </nz-header>
   <nz-content class="outer-content">
-    <div class="spacer"></div>
     <nz-layout class="inner-layout">
       <nz-content class="inner-content">
         <router-outlet></router-outlet>
@@ -16,7 +21,7 @@
         Heavily inspired by <a href="https://ffxiv-eureka.com" target="_blank">https://ffxiv-eureka.com</a>
       </div>
       <div nz-col nzXs="24" nzLg="8" class="right">
-        <a href="https://github.com/louisledoux/ffxiv-bozjan-tracker" target="_blank">Version: 0.2</a>
+        <a href="https://github.com/louisledoux/ffxiv-bozjan-tracker" target="_blank">Version: Delubrum</a>
       </div>
     </div>
   </nz-footer>

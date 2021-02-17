@@ -1,5 +1,5 @@
 .home-menu {
-    background: white;
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     padding: 20px;
 
@@ -17,12 +17,10 @@ nz-space {
     }
 }
 
-@media screen and ( min-width: 960px ) and ( min-height: 800px ) {
-    .ant-row {
-        margin-top: 10vh;
-    }
-}
-
 .logo {
     width: 20%;
+}
+
+.spacer {
+    min-height: 50px;
 }

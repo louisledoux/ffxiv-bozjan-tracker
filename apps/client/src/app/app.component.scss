@@ -1,22 +1,31 @@
 nz-layout {
-  background-image: url('https://novacrystallis.com/wp-content/uploads/2020/07/pll31.png'); 
-  background-position: center center;
+  background-image: url(https://cdn.discordapp.com/attachments/523961271562010635/811676685112049694/ffxiv_dx11_2021-02-17_20-02-23.png);
+  background-position: center;
+}
+
+nz-header {
+  $nav-height: 30px;
+
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  height: $nav-height;
+
+  padding: 0 24px;
+
+  a {
+    line-height: $nav-height;
+  }
+}
+
+.brand-logo {
+  float: left;
+  margin-top: 5px;
+  margin-right: 15px;
+  width: 20px;
 }
 
 .logo {
   color: white;
-}
-
-.header-menu {
-  line-height: 64px;
-}
-
-.spacer {
-  min-height: 50px;
-}
-
-.outer-content {
-  padding: 0 50px;
+  font-size: 1.2em;
 }
 
 .inner-layout {
@@ -31,6 +40,7 @@ nz-layout {
 nz-footer {
   color: white;
   background-color: #001529;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
 @media screen and ( min-width: 960px ) {

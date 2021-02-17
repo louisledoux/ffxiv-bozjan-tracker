@@ -1,32 +1,24 @@
-.tracker-module, .tracker-description {
-    background: white;
-    border-radius: 5px;
-    padding: 20px;
+.card-content {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 .tracker-module {
-    text-align: center;
-}
-
-@media screen and ( max-width: 360px ) {
-    .ant-col {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-    }
-}
-
-@media screen and ( max-width: 959px ) {
-    .ant-col {
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and ( min-width: 960px ) and ( min-height: 800px ) {
-    .ant-col {
-        margin-top: 10vh;
+    .card-content {
+        padding: 30px;
     }
 }
 
 p.timer {
     font-size: large;
+}
+
+nz-list, nz-list-item {
+    color: white !important;
+}
+
+label {
+    color: white !important;
 }

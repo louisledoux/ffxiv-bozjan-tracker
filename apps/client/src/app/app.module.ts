@@ -12,9 +12,9 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslationsLoaderFactory } from './translations-loader';
 
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 
 import { AppRoutingModule } from './app-routing.module';
-import { NzGridModule } from 'ng-zorro-antd/grid';
 
 @NgModule({
   declarations: [AppComponent],

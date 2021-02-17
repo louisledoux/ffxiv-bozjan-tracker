@@ -14,6 +14,10 @@ const routes: Routes = [
     {
         path: 'tracker/:id',
         loadChildren: () => import('./pages/tracker/tracker.module').then(m => m.TrackerModule)
+    },
+    {
+        path: 'lost-actions',
+        loadChildren: () => import('./pages/lost-actions/lost-actions.module').then(m => m.LostActionsModule)
     }
 ];
 

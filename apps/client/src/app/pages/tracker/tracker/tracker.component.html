@@ -1,43 +1,161 @@
-<div nz-row [nzGutter]="{ xs: 120, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }" nzAlign="top">
-    <div class="tracker-module" nz-col [nzLg]="{ span: 6, offset: 2 }" [nzSm]="{ span: 16, offset: 4 }" [nzXs]="{ span: 24 }">
-        <h1><a routerLink="">{{ 'APP.Title' | translate }}</a></h1>
-        <h2>{{ 'TRACKER.Title' | translate }}</h2>
-        <span>{{ 'TRACKER.ID_name' | translate }} : {{ this.trackerId }}</span>
-
-        <nz-divider></nz-divider>
-
-        <nz-space nzDirection="vertical" nzSize="large">
-            <span>{{ 'TRACKER.Time_before_respawn' | translate }}:</span>
-            <p class="timer"><strong><countdown #timer [config]="{ stopTime: endDate$, format: 'mm:ss', notify: [300] }" (event)="triggerAlertSound($event)" ></countdown></strong></p>
-            <nz-space-item>
-                <label nz-checkbox [(ngModel)]="isSoundActive">{{ 'TRACKER.Sound_alert' | translate }}</label>
-            </nz-space-item>
-            <nz-space-item>
-                <button nz-button [nzType]="'danger'" nzBlock (click)="showResetModal()">{{ 'TRACKER.Reset' | translate }}</button>
-            </nz-space-item>
-
-            <nz-modal
-                [(nzVisible)]="isVisible"
-                [nzTitle]="resetModalTitle"
-                [nzFooter]="resetModalFooter"
-                (nzOnCancel)="handleCancel()"
-            >
-                <p>{{ 'TRACKER_CONFIRM.Description' | translate }}</p>
-                <p><nz-input-number [(ngModel)]="lastSpawnTime" [nzMin]="1" [nzMax]="60" [nzStep]="1"></nz-input-number>&nbsp; <span>{{ 'TRACKER_CONFIRM.Minutes' | translate }}</span></p>
-                <p><strong>{{ 'TRACKER_CONFIRM.Warning' | translate }}</strong></p>
-            </nz-modal>
-            <ng-template #resetModalTitle>
-                <strong>{{ 'TRACKER_CONFIRM.Title' | translate }}</strong>
-            </ng-template>
-            <ng-template #resetModalFooter>
-                <button nz-button nzType="default" (click)="handleCancel()">{{ 'TRACKER_CONFIRM.Cancel_text' | translate }}</button>
-                <button nz-button nzType="primary" (click)="handleReset()" [nzLoading]="isConfirmLoading">{{ 'TRACKER_CONFIRM.Ok_text' | translate }}</button>
-            </ng-template>
-        </nz-space>
+<div nz-row [nzGutter]="{ xs: 120, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
+    <div class="tracker-module gutter-row" nz-col [nzLg]="{ span: 6 }" [nzSm]="{ span: 12 }" [nzXs]="{ span: 24 }">
+        <div class="card-content">
+            <h2>{{ 'TRACKER.Title' | translate }}</h2>
+            <h3>{{ 'TRACKER.ID_name' | translate }} : {{ this.trackerId }}</h3>
+            
+            <nz-space nzDirection="vertical" nzSize="large">
+                <span>{{ 'TRACKER.Time_before_respawn' | translate }}:</span>
+                <p class="timer"><strong><countdown #timer [config]="{ stopTime: castrumRespawnTimer$, format: 'mm:ss', notify: [300] }" (event)="triggerAlertSound($event)" ></countdown></strong></p>
+                <nz-space-item>
+                    <label nz-checkbox [(ngModel)]="isSoundActive">{{ 'TRACKER.Sound_alert' | translate }}</label>
+                </nz-space-item>
+                <nz-space-item>
+                    <button nz-button [nzType]="'danger'" nzBlock (click)="showResetModal()">{{ 'TRACKER.Reset' | translate }}</button>
+                </nz-space-item>
+    
+                <nz-modal
+                    [(nzVisible)]="castrumModalIsVisible"
+                    [nzTitle]="resetModalTitle"
+                    [nzFooter]="resetModalFooter"
+                    (nzOnCancel)="handleCastrumModalCancel()"
+                >
+                    <p>{{ 'TRACKER_CONFIRM.Description' | translate }}</p>
+                    <p><nz-input-number [(ngModel)]="lastSpawnTime" [nzMin]="1" [nzMax]="60" [nzStep]="1"></nz-input-number>&nbsp; <span>{{ 'TRACKER_CONFIRM.Minutes' | translate }}</span></p>
+                    <p><strong>{{ 'TRACKER_CONFIRM.Warning' | translate }}</strong></p>
+                </nz-modal>
+                <ng-template #resetModalTitle>
+                    <strong>{{ 'TRACKER_CONFIRM.Title' | translate }}</strong>
+                </ng-template>
+                <ng-template #resetModalFooter>
+                    <button nz-button nzType="default" (click)="handleCastrumModalCancel()">{{ 'TRACKER_CONFIRM.Cancel_text' | translate }}</button>
+                    <button nz-button nzType="primary" (click)="handleCastrumReset()" [nzLoading]="castrumModalIsConfirmLoading">{{ 'TRACKER_CONFIRM.Ok_text' | translate }}</button>
+                </ng-template>
+            </nz-space>
+        </div>
     </div>
 
+    <div class="stars-module gutter-row" nz-col [nzLg]="{ span: 8 }" [nzSm]="{ span: 12 }" [nzXs]="{ span: 24 }">
+        <div class="card-content">
+            <h3>Star Mobs Respawn Timers</h3>
+            <nz-list nzSize="small" nzBordered>
+                <nz-list-item>
+                    <div>
+                        {{ 'STARMOBS.TIDEBORN.Name' | translate }}
+                    </div>
+                    <div>
+                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: tidebornTimer$, format: 'mm:ss' }" ></countdown>
+                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('tideborn')">{{ 'STARMOBS.Reset' | translate }}</button>
+                    </div>
+                </nz-list-item>
+
+                <nz-list-item>
+                    <div>
+                        {{ 'STARMOBS.FERN.Name' | translate }}
+                    </div>
+                    <div>
+                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: fernTimer$, format: 'mm:ss' }" ></countdown>
+                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('fern')">{{ 'STARMOBS.Reset' | translate }}</button>
+                    </div>
+                </nz-list-item>
+
+                <nz-list-item>
+                    <div>
+                        {{ 'STARMOBS.CLAW.Name' | translate }}
+                    </div>
+                    <div>
+                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: clawTimer$, format: 'mm:ss' }" ></countdown>
+                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('claw')">{{ 'STARMOBS.Reset' | translate }}</button>
+                    </div>
+                </nz-list-item>
+
+                <nz-list-item>
+                    <div>
+                        {{ 'STARMOBS.PSOGLAV.Name' | translate }}
+                    </div>
+                    <div>
+                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: psoglavTimer$, format: 'mm:ss' }" ></countdown>
+                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('psoglav')">{{ 'STARMOBS.Reset' | translate }}</button>
+                    </div>
+                </nz-list-item>
+
+                <nz-list-item>
+                    <div>
+                        {{ 'STARMOBS.VIY.Name' | translate }}
+                    </div>
+                    <div>
+                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: viyTimer$, format: 'mm:ss' }" ></countdown>
+                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('viy')">{{ 'STARMOBS.Reset' | translate }}</button>
+                    </div>
+                </nz-list-item>
+
+                <nz-list-item>
+                    <div>
+                        {{ 'STARMOBS.SMOK.Name' | translate }}
+                    </div>
+                    <div>
+                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: smokTimer$, format: 'mm:ss' }" ></countdown>
+                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('smok')">{{ 'STARMOBS.Reset' | translate }}</button>
+                    </div>
+                </nz-list-item>
+
+                <nz-list-item>
+                    <div>
+                        {{ 'STARMOBS.PATTY.Name' | translate }}
+                    </div>
+                    <div>
+                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: pattyTimer$, format: 'mm:ss' }" ></countdown>
+                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('patty')">{{ 'STARMOBS.Reset' | translate }}</button>
+                    </div>
+                </nz-list-item>
+
+                <nz-list-item>
+                    <div>
+                        {{ 'STARMOBS.CLARE.Name' | translate }}
+                    </div>
+                    <div>
+                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: clareTimer$, format: 'mm:ss' }" ></countdown>
+                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('clare')">{{ 'STARMOBS.Reset' | translate }}</button>
+                    </div>
+                </nz-list-item>
+
+                <nz-list-item>
+                    <div>
+                        {{ 'STARMOBS.BARATHRUM.Name' | translate }}
+                    </div>
+                    <div>
+                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: barathrumTimer$, format: 'mm:ss' }" ></countdown>
+                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('barathrum')">{{ 'STARMOBS.Reset' | translate }}</button>
+                    </div>
+                </nz-list-item>
+            </nz-list>
+        </div>
+    </div>
+
+    <!--
     <div class="tracker-description" nz-col [nzLg]="{ span: 12, offset: 2 }" [nzSm]="{ span: 16, offset: 4 }" [nzXs]="{ span: 24 }">
-        <h2>{{ 'TRACKER_DESCRIPTION.Title' | translate }}</h2>
+        <nz-tabset>
+            <nz-tab nzTitle="{{ 'TRACKER_DESCRIPTION.Rules_tab' | translate }}">
+                <br/>
+                <nz-list nzSize="large">
+                    <nz-list-item>
+                        {{ 'TRACKER_DESCRIPTION.New_instance' | translate }}
+                    </nz-list-item>
+                    <nz-list-item>
+                        {{ 'TRACKER_DESCRIPTION.Respawn_rule' | translate }}
+                    </nz-list-item>
+                </nz-list>
+            </nz-tab>
+            <nz-tab nzTitle="{{ 'TRACKER_DESCRIPTION.Guide_tab' | translate }}" nzDisabled>
+                
+            </nz-tab>
+            <nz-tab nzTitle="{{ 'TRACKER_DESCRIPTION.Map_tab' | translate }}" nzDisabled>
+
+            </nz-tab>
+        </nz-tabset>
+        -->
+
+        <!-- <h2>{{ 'TRACKER_DESCRIPTION.Title' | translate }}</h2>
         <nz-list nzSize="large" nzBordered>
             <nz-list-item>
                 {{ 'TRACKER_DESCRIPTION.New_instance' | translate }}
@@ -45,5 +163,6 @@
             <nz-list-item>
                 {{ 'TRACKER_DESCRIPTION.Respawn_rule' | translate }}
             </nz-list-item>
-        </nz-list>
+        </nz-list> -->
+    </div>
 

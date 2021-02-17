@@ -1,6 +1,7 @@
+<div class="spacer"></div>
 <div nz-row [nzGutter]="{ xs: 120, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }" nzAlign="middle">
-    <div class="home-menu" nz-col [nzLg]="{ span: 6, offset: 2, order: 1 }" [nzSm]="{ span: 16, offset: 4, order: 2 }" [nzXs]="{ span: 24, order: 2 }">
-        <img src="assets/img/logo.png" alt="logo" class="logo" />
+    <div class="home-menu" nz-col [nzLg]="{ span: 6, offset: 9, order: 1 }" [nzSm]="{ span: 16, offset: 4, order: 2 }" [nzXs]="{ span: 24, order: 2 }">
+        <img src="assets/img/bozjan-tracker-logo.png" alt="logo" class="logo" />
         <h1><a routerLink="">{{ 'APP.Title' | translate }}</a></h1>
         <span>{{ 'APP.Description' | translate }}</span>
 
@@ -33,13 +34,10 @@
 
         <nz-space nzDirection="vertical" nzSize="large">
             <nz-space-item>
-                <button nz-button nzType="primary" nzBlock disabled>{{ 'HOMEPAGE_CARD.Weather' | translate }} (WIP)</button>
+                <button routerLink="lost-actions" nz-button nzType="default" nzBlock disabled>{{ 'HOMEPAGE_CARD.Lost_actions' | translate }} (WIP)</button>
             </nz-space-item>
             <nz-space-item>
-                <button nz-button nzType="primary" nzBlock disabled>{{ 'HOMEPAGE_CARD.Lost_actions' | translate }} (WIP)</button>
-            </nz-space-item>
-            <nz-space-item>
-                <button nz-button nzType="primary" nzBlock disabled>{{ 'HOMEPAGE_CARD.Wiki' | translate }} (WIP)</button>
+                <button nz-button nzType="default" nzBlock disabled>{{ 'HOMEPAGE_CARD.Wiki' | translate }} (WIP)</button>
             </nz-space-item>
         </nz-space>
     </div>

@@ -37,7 +37,16 @@ export class HomepageComponent {
       .collection('trackers')
       .doc(this.trackerId)
       .set({
-        respawnDate: new Date(Date.now() + 60*60*1000)
+        castrumRespawnDate: new Date(Date.now() + 60*60*1000),
+        tidebornTimer: null,
+        fernTimer: null,
+        clawTimer: null,
+        psoglavTimer: null,
+        viyTimer: null,
+        smokTimer: null,
+        pattyTimer: null,
+        clareTimer: null,
+        barathrumTimer: null,
       })
       .then(res => {
         this.router.navigate(['./tracker', this.trackerId])
