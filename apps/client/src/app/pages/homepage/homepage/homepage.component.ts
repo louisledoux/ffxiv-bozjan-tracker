@@ -38,15 +38,15 @@ export class HomepageComponent {
       .doc(this.trackerId)
       .set({
         castrumRespawnDate: new Date(Date.now() + 60*60*1000),
-        tidebornTimer: null,
-        fernTimer: null,
-        clawTimer: null,
-        psoglavTimer: null,
-        viyTimer: null,
-        smokTimer: null,
-        pattyTimer: null,
-        clareTimer: null,
-        barathrumTimer: null,
+        tidebornTimer: new Date(Date.now()),
+        fernTimer: new Date(Date.now()),
+        clawTimer: new Date(Date.now()),
+        psoglavTimer: new Date(Date.now()),
+        viyTimer: new Date(Date.now()),
+        smokTimer: new Date(Date.now()),
+        pattyTimer: new Date(Date.now()),
+        clareTimer: new Date(Date.now()),
+        barathrumTimer: new Date(Date.now()),
       })
       .then(res => {
         this.router.navigate(['./tracker', this.trackerId])

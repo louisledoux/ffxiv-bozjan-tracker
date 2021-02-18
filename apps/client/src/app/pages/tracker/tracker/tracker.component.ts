@@ -54,15 +54,33 @@ export class TrackerComponent implements OnInit, AfterContentInit {
           const trackerData = data;
           if (trackerData.castrumRespawnDate.toDate().getTime() > new Date().getTime()) {
             this.castrumRespawnTimer$ = trackerData.castrumRespawnDate.toDate().getTime();
+          }
+          if (trackerData.tidebornTimer.toDate().getTime() > new Date().getTime()) {
             this.tidebornTimer$ = trackerData.tidebornTimer.toDate().getTime();
-            this.fernTimer$ = trackerData.fernTimer.toDate().getTime();
-            this.clawTimer$ = trackerData.clawTimer.toDate().getTime();
-            this.psoglavTimer$ = trackerData.psoglavTimer.toDate().getTime();
-            this.viyTimer$ = trackerData.viyTimer.toDate().getTime();
-            this.smokTimer$ = trackerData.smokTimer.toDate().getTime();
-            this.pattyTimer$ = trackerData.pattyTimer.toDate().getTime();
-            this.clareTimer$ = trackerData.clareTimer.toDate().getTime();
-            this.barathrumTimer$ = trackerData.barathrumTimer.toDate().getTime();
+          }
+          if (trackerData.fernTimer.toDate().getTime() > new Date().getTime()) {
+            this.fernTimer$ = trackerData.fernTimer.toDate().getTime();            
+          }
+          if (trackerData.clawTimer.toDate().getTime() > new Date().getTime()) {
+            this.clawTimer$ = trackerData.clawTimer.toDate().getTime();            
+          }
+          if (trackerData.psoglavTimer.toDate().getTime() > new Date().getTime()) {
+            this.psoglavTimer$ = trackerData.psoglavTimer.toDate().getTime();            
+          }
+          if (trackerData.viyTimer.toDate().getTime() > new Date().getTime()) {
+            this.viyTimer$ = trackerData.viyTimer.toDate().getTime();            
+          }
+          if (trackerData.smokTimer.toDate().getTime() > new Date().getTime()) {
+            this.smokTimer$ = trackerData.smokTimer.toDate().getTime();            
+          }
+          if (trackerData.pattyTimer.toDate().getTime() > new Date().getTime()) {
+            this.pattyTimer$ = trackerData.pattyTimer.toDate().getTime();            
+          }
+          if (trackerData.clareTimer.toDate().getTime() > new Date().getTime()) {
+            this.clareTimer$ = trackerData.clareTimer.toDate().getTime();            
+          }
+          if (trackerData.barathrumTimer.toDate().getTime() > new Date().getTime()) {
+            this.barathrumTimer$ = trackerData.barathrumTimer.toDate().getTime();            
           }
         } else {
           this.triggerAlertModal = true;
