@@ -5312,6 +5312,16 @@ env-paths@^2.2.0:
   resolved "https://registry.yarnpkg.com/env-paths/-/env-paths-2.2.0.tgz#cdca557dc009152917d6166e2febe1f039685e43"
   integrity sha512-6u0VYSCo/OW6IoD5WCLLy9JUGARbamfSavcNXry/eu8aHVFei6CD3Sw+VGX5alea1i9pgPHW0mbu6Xj0uBh7gA==
 
+eorzea-time@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eorzea-time/-/eorzea-time-3.0.0.tgz#2089dc935cb942bf38dc3410156a9cb11529302a"
+  integrity sha512-+iLaILTka0LqBV5ga0m3B7DB2Ou4QMAiYw9ldwfh0kgxjD6VFDOeXiUJf8mG4xIVJj2UmKv2sZokJ+Jz4urZUw==
+
+eorzea-weather@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/eorzea-weather/-/eorzea-weather-3.1.0.tgz#8b8888434f16cb8d331a5dfaac63c992a8fb5a5d"
+  integrity sha512-UhnQd7my+gT+9JRmK5oZ6gcyPBMVkx86J25T9/KEhBQpgQWa3ANmi+qqBtoBunxaTsZCY3QaNxK2prp26X/zIg==
+
 err-code@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/err-code/-/err-code-1.1.2.tgz#06e0116d3028f6aef4806849eb0ea6a748ae6960"
@@ -8774,7 +8784,7 @@ lodash.values@^2.4.1:
   dependencies:
     lodash.keys "~2.4.1"
 
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.5, lodash@^4.5.0:
+lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.5, lodash@^4.5.0:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==

@@ -39,3 +39,28 @@ h2, h3, h4, h5, h6 {
 .ant-list-bordered {
     border: 1px solid #3c3f41 !important;
 }
+
+.ant-table {
+    background: #0000006e !important;
+}
+
+.ant-table-thead {
+    tr {
+        th {
+            background: none !important;
+            border-bottom: 1px solid #3c3f41 !important;
+        }
+    }
+}
+
+.ant-table-tbody {
+    tr {
+        td {
+            border-bottom: 1px solid #3c3f41 !important;
+        }
+    }
+}
+
+.ant-table-tbody tr.ant-table-row:hover td {
+    background: unset !important;
+  }

@@ -1,9 +1,12 @@
 <nz-layout>
-  <nz-header>
-    <a routerLink="">
+  <nz-header nz-row>
+    <a nz-col nzSpan="12" routerLink="">
       <img src="assets/img/bozjan-tracker-logo.png" alt="logo" class="brand-logo" />
       <h1 class="logo">{{ 'APP.Title' | translate }}</h1>
     </a>
+    <span nz-col nzSpan="12">
+      Eorzea Time: {{etTimer}}
+    </span>
   </nz-header>
   <nz-content class="outer-content">
     <nz-layout class="inner-layout">

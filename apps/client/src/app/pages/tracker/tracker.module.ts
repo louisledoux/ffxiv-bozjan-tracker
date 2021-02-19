@@ -16,6 +16,7 @@ import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { CountdownModule } from 'ngx-countdown';
 import { FormsModule } from '@angular/forms';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 const routes: Routes = [{
   path: '',
@@ -40,6 +41,7 @@ const routes: Routes = [{
     NzCheckboxModule,
     NzTabsModule,
     NzCollapseModule,
+    NzTableModule,
 
     CountdownModule,
 
