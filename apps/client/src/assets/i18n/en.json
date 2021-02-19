@@ -46,6 +46,13 @@
         "Reset": "Reset"
     },
 
+    "WEATHER": {
+        "Title": "Bozjan Weather (Updated in Real Time)",
+        "Type": "Weather Type",
+        "Et": "Eorzea Time",
+        "Lt": "Locale Time"
+    },
+
     "TRACKER": {
         "Title": "Castrum Lacus Litore Tracker",
         "ID_name" : "Tracker ID",

@@ -15,10 +15,25 @@ p.timer {
     font-size: large;
 }
 
+nz-list {
+    background: #0000006e !important;
+}
+
 nz-list, nz-list-item {
     color: white !important;
 }
 
 label {
     color: white !important;
+}
+
+nz-table {
+
+    th, td {
+        color: white !important;
+    }
+
+    img {
+        width: 25px;
+    }
 }

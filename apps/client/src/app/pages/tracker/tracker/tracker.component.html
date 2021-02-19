@@ -1,37 +1,72 @@
-<div nz-row [nzGutter]="{ xs: 120, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
-    <div class="tracker-module gutter-row" nz-col [nzLg]="{ span: 6 }" [nzSm]="{ span: 12 }" [nzXs]="{ span: 24 }">
-        <div class="card-content">
-            <h2>{{ 'TRACKER.Title' | translate }}</h2>
-            <h3>{{ 'TRACKER.ID_name' | translate }} : {{ this.trackerId }}</h3>
-            
-            <nz-space nzDirection="vertical" nzSize="large">
-                <span>{{ 'TRACKER.Time_before_respawn' | translate }}:</span>
-                <p class="timer"><strong><countdown #timer [config]="{ stopTime: castrumRespawnTimer$, format: 'mm:ss', notify: [300] }" (event)="triggerAlertSound($event)" ></countdown></strong></p>
-                <nz-space-item>
-                    <label nz-checkbox [(ngModel)]="isSoundActive">{{ 'TRACKER.Sound_alert' | translate }}</label>
-                </nz-space-item>
-                <nz-space-item>
-                    <button nz-button [nzType]="'danger'" nzBlock (click)="showResetModal()">{{ 'TRACKER.Reset' | translate }}</button>
-                </nz-space-item>
-    
-                <nz-modal
-                    [(nzVisible)]="castrumModalIsVisible"
-                    [nzTitle]="resetModalTitle"
-                    [nzFooter]="resetModalFooter"
-                    (nzOnCancel)="handleCastrumModalCancel()"
+<div nz-row [nzGutter]="{ md: 24, lg: 32, xl: 32, xxl: 32 }">
+    <div class="gutter-row" nz-col [nzLg]="{ span: 6 }" [nzSm]="{ span: 12 }" [nzXs]="{ span: 24 }">
+        <div class="tracker-module">
+            <div class="card-content">
+                <h2>{{ 'TRACKER.Title' | translate }}</h2>
+                <h3>{{ 'TRACKER.ID_name' | translate }} : {{ this.trackerId }}</h3>
+                
+                <nz-space nzDirection="vertical" nzSize="large">
+                    <span>{{ 'TRACKER.Time_before_respawn' | translate }}:</span>
+                    <p class="timer"><strong><countdown #timer [config]="{ stopTime: castrumRespawnTimer$, format: 'mm:ss', notify: [300] }" (event)="triggerAlertSound($event)" ></countdown></strong></p>
+                    <nz-space-item>
+                        <label nz-checkbox [(ngModel)]="isSoundActive">{{ 'TRACKER.Sound_alert' | translate }}</label>
+                    </nz-space-item>
+                    <nz-space-item>
+                        <button nz-button [nzType]="'danger'" nzBlock (click)="showResetModal()">{{ 'TRACKER.Reset' | translate }}</button>
+                    </nz-space-item>
+        
+                    <nz-modal
+                        [(nzVisible)]="castrumModalIsVisible"
+                        [nzTitle]="resetModalTitle"
+                        [nzFooter]="resetModalFooter"
+                        (nzOnCancel)="handleCastrumModalCancel()"
+                    >
+                        <p>{{ 'TRACKER_CONFIRM.Description' | translate }}</p>
+                        <p><nz-input-number [(ngModel)]="lastSpawnTime" [nzMin]="1" [nzMax]="60" [nzStep]="1"></nz-input-number>&nbsp; <span>{{ 'TRACKER_CONFIRM.Minutes' | translate }}</span></p>
+                        <p><strong>{{ 'TRACKER_CONFIRM.Warning' | translate }}</strong></p>
+                    </nz-modal>
+                    <ng-template #resetModalTitle>
+                        <strong>{{ 'TRACKER_CONFIRM.Title' | translate }}</strong>
+                    </ng-template>
+                    <ng-template #resetModalFooter>
+                        <button nz-button nzType="default" (click)="handleCastrumModalCancel()">{{ 'TRACKER_CONFIRM.Cancel_text' | translate }}</button>
+                        <button nz-button nzType="primary" (click)="handleCastrumReset()" [nzLoading]="castrumModalIsConfirmLoading">{{ 'TRACKER_CONFIRM.Ok_text' | translate }}</button>
+                    </ng-template>
+                </nz-space>
+            </div>
+        </div>
+
+        <div class="weather-module">
+            <div class="card-content">
+                <h3>{{ 'WEATHER.Title' | translate }}</h3>
+                <!-- <p *ngFor="let item of bozjanWeather">{{ item.name }} -- {{ item.eorzeaTime }} -- {{ item.startedAt | date: "HH:mm" }}</p> -->
+                <nz-table #weatherTable
+                    [nzLoading]="weatherLoaded"
+                    [nzData]="bozjanWeather"
+                    [nzPageSize]="6"
                 >
-                    <p>{{ 'TRACKER_CONFIRM.Description' | translate }}</p>
-                    <p><nz-input-number [(ngModel)]="lastSpawnTime" [nzMin]="1" [nzMax]="60" [nzStep]="1"></nz-input-number>&nbsp; <span>{{ 'TRACKER_CONFIRM.Minutes' | translate }}</span></p>
-                    <p><strong>{{ 'TRACKER_CONFIRM.Warning' | translate }}</strong></p>
-                </nz-modal>
-                <ng-template #resetModalTitle>
-                    <strong>{{ 'TRACKER_CONFIRM.Title' | translate }}</strong>
-                </ng-template>
-                <ng-template #resetModalFooter>
-                    <button nz-button nzType="default" (click)="handleCastrumModalCancel()">{{ 'TRACKER_CONFIRM.Cancel_text' | translate }}</button>
-                    <button nz-button nzType="primary" (click)="handleCastrumReset()" [nzLoading]="castrumModalIsConfirmLoading">{{ 'TRACKER_CONFIRM.Ok_text' | translate }}</button>
-                </ng-template>
-            </nz-space>
+                    <thead>
+                        <tr>
+                            <th>{{ 'WEATHER.Type' | translate }}</th>
+                            <th>{{ 'WEATHER.Et' | translate }}</th>
+                            <th>{{ 'WEATHER.Lt' | translate }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let weather of weatherTable.data">
+                            <td>
+                                <img *ngIf="weather.name ==='Fair Skies'" src="assets/img/weather/fair_skies.png" alt="Fair Skies" />
+                                <img *ngIf="weather.name ==='Dust Storms'" src="assets/img/weather/dust_storms.png" alt="Dust Storms" />
+                                <img *ngIf="weather.name ==='Rain'" src="assets/img/weather/rain.png" alt="Rain" />
+                                <img *ngIf="weather.name ==='Wind'" src="assets/img/weather/wind.png" alt="Wind" />
+                                <img *ngIf="weather.name ==='Thunder'" src="assets/img/weather/thunder.png" alt="Thunder" />
+                                &nbsp;{{ weather.name }}</td>
+                            <td>{{ weather.eorzeaTime }}</td>
+                            <td>{{ weather.startedAt | date: "HH:mm" }}</td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
         </div>
     </div>
 

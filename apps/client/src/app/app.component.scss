@@ -11,8 +11,14 @@ nz-header {
 
   padding: 0 24px;
 
-  a {
+  a, span {
     line-height: $nav-height;
+  }
+
+  span {
+    color: white;
+    font-weight: 500;
+    text-align: right;
   }
 }
 

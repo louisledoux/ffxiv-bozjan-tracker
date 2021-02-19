@@ -1,17 +1,22 @@
-import { AfterContentInit, Component, OnInit } from '@angular/core';
+import { AfterContentInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute, Params } from '@angular/router';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { Observable } from 'rxjs';
 
+import { range } from 'lodash';
+
 import { Timer } from '../../../model/common/timer';
+
+import EorzeaWeather from 'eorzea-weather';
+import EorzeaTime from 'eorzea-time';
 
 @Component({
   selector: 'ffxiv-bozjan-tracker-tracker',
   templateUrl: './tracker.component.html',
   styleUrls: ['./tracker.component.scss']
 })
-export class TrackerComponent implements OnInit, AfterContentInit {
+export class TrackerComponent implements OnInit, AfterContentInit, OnDestroy {
 
   public castrumModalIsVisible = false;
   public castrumModalIsConfirmLoading = false;
@@ -38,6 +43,12 @@ export class TrackerComponent implements OnInit, AfterContentInit {
   public clareTimer$: Observable<number>;
   public barathrumTimer$: Observable<number>;
 
+  public bozjanWeather;
+  public weatherLoaded: boolean = true;
+  public etTimer: String;
+  private EIGHT_HOURS = 8 * 175 * 1000;
+  private ONE_DAY = 8 * 175 * 1000 * 3;
+
   constructor(private route: ActivatedRoute, private firestore: AngularFirestore, private message: NzMessageService) {
   }
 
@@ -48,6 +59,7 @@ export class TrackerComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit() {
+    //Get Timers info in Firebase and subscribe to them for autoupdate
     this.firestore.collection('trackers').doc<Timer>(this.trackerId).valueChanges()
       .subscribe(data => {
         if (data) {
@@ -86,6 +98,35 @@ export class TrackerComponent implements OnInit, AfterContentInit {
           this.triggerAlertModal = true;
         }
       });
+
+    const getStartTime = () => {
+      const oneHour = 175*1000;
+      const msec = new Date().getTime();
+      const bell = (msec / oneHour) % 8;
+      const startMsec = msec - Math.round(oneHour * bell);
+
+      return new Date(startMsec);
+    }
+
+    //Get Eorzea Weather info
+    const getWeathers = (zoneId, past = this.EIGHT_HOURS, future = this.ONE_DAY * 6) => {
+      const weather = new EorzeaWeather(zoneId);
+      const startTime = getStartTime().getTime();
+
+      return range(startTime, startTime + future, this.EIGHT_HOURS).map((time) => {
+        const startedAt = new Date(time);
+        return {
+          name: weather.getWeather(startedAt),
+          eorzeaTime: `0${new EorzeaTime(startedAt).getHours()}`.slice(-2) + ":" + `0${new EorzeaTime(startedAt).getMinutes()}`.slice(-2),
+          startedAt: startedAt,
+        }
+      });
+    }
+
+    setInterval(() => {
+      this.bozjanWeather = getWeathers('bozjanSouthernFront');
+      this.weatherLoaded = false;
+    }, 1000);
   }
 
   showResetModal(): void {
@@ -307,6 +348,10 @@ export class TrackerComponent implements OnInit, AfterContentInit {
 
   handleStarmobsModalCancel() {
     this.starmobsModalIsVisible = false;
+  }
+
+  ngOnDestroy() {
+
   }
 
 }
