@@ -70,108 +70,107 @@
         </div>
     </div>
 
-    <div class="stars-module gutter-row" nz-col [nzLg]="{ span: 8 }" [nzSm]="{ span: 12 }" [nzXs]="{ span: 24 }">
-        <div class="card-content">
-            <h3>Star Mobs Respawn Timers</h3>
-            <nz-list nzSize="small" nzBordered>
-                <nz-list-item>
-                    <div>
-                        {{ 'STARMOBS.TIDEBORN.Name' | translate }}
-                    </div>
-                    <div>
-                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: tidebornTimer$, format: 'm' }" ></countdown>m
-                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('tideborn')">{{ 'STARMOBS.Reset' | translate }}</button>
-                    </div>
-                </nz-list-item>
-
-                <nz-list-item>
-                    <div>
-                        {{ 'STARMOBS.FERN.Name' | translate }}
-                    </div>
-                    <div>
-                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: fernTimer$, format: 'm' }" ></countdown>m
-                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('fern')">{{ 'STARMOBS.Reset' | translate }}</button>
-                    </div>
-                </nz-list-item>
-
-                <nz-list-item>
-                    <div>
-                        {{ 'STARMOBS.CLAW.Name' | translate }}
-                    </div>
-                    <div>
-                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: clawTimer$, format: 'm' }" ></countdown>m
-                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('claw')">{{ 'STARMOBS.Reset' | translate }}</button>
-                    </div>
-                </nz-list-item>
-
-                <nz-list-item>
-                    <div>
-                        {{ 'STARMOBS.PSOGLAV.Name' | translate }}
-                    </div>
-                    <div>
-                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: psoglavTimer$, format: 'm' }" ></countdown>m
-                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('psoglav')">{{ 'STARMOBS.Reset' | translate }}</button>
-                    </div>
-                </nz-list-item>
-
-                <nz-list-item>
-                    <div>
-                        {{ 'STARMOBS.VIY.Name' | translate }}
-                    </div>
-                    <div>
-                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: viyTimer$, format: 'm' }" ></countdown>m
-                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('viy')">{{ 'STARMOBS.Reset' | translate }}</button>
-                    </div>
-                </nz-list-item>
-
-                <nz-list-item>
-                    <div>
-                        {{ 'STARMOBS.SMOK.Name' | translate }}
-                    </div>
-                    <div>
-                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: smokTimer$, format: 'm' }" ></countdown>m
-                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('smok')">{{ 'STARMOBS.Reset' | translate }}</button>
-                    </div>
-                </nz-list-item>
-
-                <nz-list-item>
-                    <div>
-                        {{ 'STARMOBS.PATTY.Name' | translate }}
-                    </div>
-                    <div>
-                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: pattyTimer$, format: 'm' }" ></countdown>m
-                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('patty')">{{ 'STARMOBS.Reset' | translate }}</button>
-                    </div>
-                </nz-list-item>
-
-                <nz-list-item>
-                    <div>
-                        {{ 'STARMOBS.CLARE.Name' | translate }}
-                    </div>
-                    <div>
-                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: clareTimer$, format: 'm' }" ></countdown>m
-                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('clare')">{{ 'STARMOBS.Reset' | translate }}</button>
-                    </div>
-                </nz-list-item>
-
-                <nz-list-item>
-                    <div>
-                        {{ 'STARMOBS.BARATHRUM.Name' | translate }}
-                    </div>
-                    <div>
-                        {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: barathrumTimer$, format: 'm' }" ></countdown>m
-                        &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('barathrum')">{{ 'STARMOBS.Reset' | translate }}</button>
-                    </div>
-                </nz-list-item>
-            </nz-list>
+    <div class="gutter-row" nz-col [nzLg]="{ span: 8 }" [nzSm]="{ span: 12 }" [nzXs]="{ span: 24 }">
+        <div class="stars-module">
+            <div class="card-content">
+                <h3>{{ 'STARMOBS.Title' | translate }}</h3>
+                <nz-list nzSize="small" nzBordered>
+                    <nz-list-item>
+                        <div>
+                            {{ 'STARMOBS.TIDEBORN.Name' | translate }}
+                        </div>
+                        <div>
+                            {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: tidebornTimer$, format: 'm' }" ></countdown>m
+                            &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('tideborn')">{{ 'STARMOBS.Reset' | translate }}</button>
+                        </div>
+                    </nz-list-item>
+    
+                    <nz-list-item>
+                        <div>
+                            {{ 'STARMOBS.FERN.Name' | translate }}
+                        </div>
+                        <div>
+                            {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: fernTimer$, format: 'm' }" ></countdown>m
+                            &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('fern')">{{ 'STARMOBS.Reset' | translate }}</button>
+                        </div>
+                    </nz-list-item>
+    
+                    <nz-list-item>
+                        <div>
+                            {{ 'STARMOBS.CLAW.Name' | translate }}
+                        </div>
+                        <div>
+                            {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: clawTimer$, format: 'm' }" ></countdown>m
+                            &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('claw')">{{ 'STARMOBS.Reset' | translate }}</button>
+                        </div>
+                    </nz-list-item>
+    
+                    <nz-list-item>
+                        <div>
+                            {{ 'STARMOBS.PSOGLAV.Name' | translate }}
+                        </div>
+                        <div>
+                            {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: psoglavTimer$, format: 'm' }" ></countdown>m
+                            &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('psoglav')">{{ 'STARMOBS.Reset' | translate }}</button>
+                        </div>
+                    </nz-list-item>
+    
+                    <nz-list-item>
+                        <div>
+                            {{ 'STARMOBS.VIY.Name' | translate }}
+                        </div>
+                        <div>
+                            {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: viyTimer$, format: 'm' }" ></countdown>m
+                            &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('viy')">{{ 'STARMOBS.Reset' | translate }}</button>
+                        </div>
+                    </nz-list-item>
+    
+                    <nz-list-item>
+                        <div>
+                            {{ 'STARMOBS.SMOK.Name' | translate }}
+                        </div>
+                        <div>
+                            {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: smokTimer$, format: 'm' }" ></countdown>m
+                            &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('smok')">{{ 'STARMOBS.Reset' | translate }}</button>
+                        </div>
+                    </nz-list-item>
+    
+                    <nz-list-item>
+                        <div>
+                            {{ 'STARMOBS.PATTY.Name' | translate }}
+                        </div>
+                        <div>
+                            {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: pattyTimer$, format: 'm' }" ></countdown>m
+                            &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('patty')">{{ 'STARMOBS.Reset' | translate }}</button>
+                        </div>
+                    </nz-list-item>
+    
+                    <nz-list-item>
+                        <div>
+                            {{ 'STARMOBS.CLARE.Name' | translate }}
+                        </div>
+                        <div>
+                            {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: clareTimer$, format: 'm' }" ></countdown>m
+                            &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('clare')">{{ 'STARMOBS.Reset' | translate }}</button>
+                        </div>
+                    </nz-list-item>
+    
+                    <nz-list-item>
+                        <div>
+                            {{ 'STARMOBS.BARATHRUM.Name' | translate }}
+                        </div>
+                        <div>
+                            {{ 'STARMOBS.RespawnText' | translate }} <countdown [config]="{ stopTime: barathrumTimer$, format: 'm' }" ></countdown>m
+                            &nbsp; <button nz-button nzSize="small" (click)="handleStarmobsReset('barathrum')">{{ 'STARMOBS.Reset' | translate }}</button>
+                        </div>
+                    </nz-list-item>
+                </nz-list>
+            </div>
         </div>
-    </div>
 
-    <!--
-    <div class="tracker-description" nz-col [nzLg]="{ span: 12, offset: 2 }" [nzSm]="{ span: 16, offset: 4 }" [nzXs]="{ span: 24 }">
-        <nz-tabset>
-            <nz-tab nzTitle="{{ 'TRACKER_DESCRIPTION.Rules_tab' | translate }}">
-                <br/>
+        <div class="tracker-description">
+            <div class="card-content">
+                <h3>{{ 'TRACKER_DESCRIPTION.Title' | translate }}</h3>
                 <nz-list nzSize="large">
                     <nz-list-item>
                         {{ 'TRACKER_DESCRIPTION.New_instance' | translate }}
@@ -180,24 +179,16 @@
                         {{ 'TRACKER_DESCRIPTION.Respawn_rule' | translate }}
                     </nz-list-item>
                 </nz-list>
-            </nz-tab>
-            <nz-tab nzTitle="{{ 'TRACKER_DESCRIPTION.Guide_tab' | translate }}" nzDisabled>
-                
-            </nz-tab>
-            <nz-tab nzTitle="{{ 'TRACKER_DESCRIPTION.Map_tab' | translate }}" nzDisabled>
+            </div>
+        </div>
+    </div>
 
-            </nz-tab>
-        </nz-tabset>
-        -->
+    <div class="map gutter-row" nz-col [nzLg]="{ span: 10 }" [nzSm]="{ span: 24 }" [nzXs]="{ span: 24 }">
+        <div class="card-content">
+            <h3>{{ 'MAP.Title' | translate }}</h3>
+            <img src="assets/img/map/bozjan_map.png" alt="Bozja Map" />
+        </div>
+    </div>
 
-        <!-- <h2>{{ 'TRACKER_DESCRIPTION.Title' | translate }}</h2>
-        <nz-list nzSize="large" nzBordered>
-            <nz-list-item>
-                {{ 'TRACKER_DESCRIPTION.New_instance' | translate }}
-            </nz-list-item>
-            <nz-list-item>
-                {{ 'TRACKER_DESCRIPTION.Respawn_rule' | translate }}
-            </nz-list-item>
-        </nz-list> -->
     </div>
 

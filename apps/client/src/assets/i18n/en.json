@@ -14,7 +14,12 @@
         "Join_error": "Error: This tracker doesn't exist"
     },
 
+    "MAP": {
+        "Title": "Bozjan Map - With Star Mobs Locations"
+    },
+
     "STARMOBS": {
+        "Title": "Star Mobs Respawn Timers",
         "TIDEBORN": {
             "Name": "Tideborn Angel"
         },
@@ -57,7 +62,7 @@
         "Title": "Castrum Lacus Litore Tracker",
         "ID_name" : "Tracker ID",
         "Time_before_respawn": "Time left before next Castrum spawn",
-        "Sound_alert": "Alert me 5 minutes before",
+        "Sound_alert": "Give me a sound alert 5 minutes before",
         "Reset": "Reset the Timer"
     },
 
@@ -71,11 +76,12 @@
     },
 
     "TRACKER_DESCRIPTION": {
+        "Title": "Bozjan Tips",
         "Rules_tab": "Castrum Respawn Rules",
         "Guide_tab": "Castrum Guide",
         "Map_tab": "Bozjan Map",
         "New_instance": "Castrum pop is every hour. If the instance is new, the Castrum will pop one hour after the beginning of the instance.",
-        "Respawn_rule": "The Castrum timer will reset ONLY when the ongoing Castrum is fully finished. From then you can reset the timer :)"
+        "Respawn_rule": "The in-game Castrum timer will reset ONLY when the ongoing Castrum is fully finished (you can know a Castrum is fully finished when it is not displayed anymore in the CE registration tab). From then you can reset the timer ♥"
     },
 
     "LOST_ACTIONS_PREFIX": {
