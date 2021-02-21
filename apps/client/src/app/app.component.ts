@@ -13,8 +13,19 @@ export class AppComponent implements OnInit {
 
   public etTimer: String;
 
+  public language= navigator.language;
+
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
+    if (navigator.language === 'en-US' || 'en-GB') {
+      this.language = 'en';
+    } else if (navigator.language === 'fr-FR')  {
+      this.language = 'fr';
+    }
+    translate.setDefaultLang(this.language);
+  }
+
+  updateLanguage() {
+    this.translate.use(this.language)
   }
 
   ngOnInit() {

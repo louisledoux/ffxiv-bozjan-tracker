@@ -60,7 +60,12 @@
                                 <img *ngIf="weather.name ==='Rain'" src="assets/img/weather/rain.png" alt="Rain" />
                                 <img *ngIf="weather.name ==='Wind'" src="assets/img/weather/wind.png" alt="Wind" />
                                 <img *ngIf="weather.name ==='Thunder'" src="assets/img/weather/thunder.png" alt="Thunder" />
-                                &nbsp;{{ weather.name }}</td>
+                                &nbsp;
+                                <span *ngIf="weather.name === 'Fair Skies'">{{ 'WEATHER.FairSkies' | translate }}</span>
+                                <span *ngIf="weather.name === 'Dust Storms'">{{ 'WEATHER.DustStorms' | translate }}</span>
+                                <span *ngIf="weather.name === 'Rain'">{{ 'WEATHER.Rain' | translate }}</span>
+                                <span *ngIf="weather.name === 'Wind'">{{ 'WEATHER.Wind' | translate }}</span>
+                                <span *ngIf="weather.name === 'Thunder'">{{ 'WEATHER.Thunder' | translate }}</span></td>
                             <td>{{ weather.eorzeaTime }}</td>
                             <td>{{ weather.startedAt | date: "HH:mm" }}</td>
                         </tr>

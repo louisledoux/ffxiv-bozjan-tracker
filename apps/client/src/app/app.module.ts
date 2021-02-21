@@ -15,6 +15,8 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 
 import { AppRoutingModule } from './app-routing.module';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,8 +34,11 @@ import { AppRoutingModule } from './app-routing.module';
       }
     }),
 
+    FormsModule,
+
     NzLayoutModule,
     NzGridModule,
+    NzSelectModule,
 
     AppRoutingModule
   ],

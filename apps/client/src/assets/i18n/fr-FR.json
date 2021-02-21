@@ -1,0 +1,114 @@
+{
+    "APP": {
+        "Title": "Bozjan Toolkit",
+        "Description": "Un outil non-officiel FFXIV"
+    },
+
+    "HOMEPAGE_CARD": {
+        "Tracker_input_placeholder" : "Entrez l'ID du Tracker",
+        "Tracker_input_button": "Entrer",
+        "Create_tracker": "Créer un nouveau Tracker bozjien",
+        "Lost_actions": "Actions perdues",
+        "Wiki": "Wiki & Conseils",
+        "Weather": "Météo bozjienne",
+        "Join_error": "Erreur : Ce Tracker n'existe pas"
+    },
+
+    "MAP": {
+        "Title": "Carte de Bozja - Avec la position des Monstres-Étoiles"
+    },
+
+    "STARMOBS": {
+        "Title": "Timers de réapparition des Monstres-Étoiles",
+        "TIDEBORN": {
+            "Name": "Dragon bleu"
+        },
+        "FERN": {
+            "Name": "Fleur de fougère"
+        },
+        "CLAW": {
+            "Name": "Scorpion pinces d'encre"
+        },
+        "PSOGLAV": {
+            "Name": "Psoglav"
+        },
+        "VIY": {
+            "Name": "Vij"
+        },
+        "SMOK": {
+            "Name": "Smok"
+        },
+        "PATTY": {
+            "Name": "Patty"
+        },
+        "CLARE": {
+            "Name": "Claire la collante"
+        },
+        "BARATHRUM": {
+            "Name": "Oiseau de Barathrum"
+        },
+        "RespawnText": "Prochaine apparition dans :",
+        "Reset": "Réinitialiser"
+    },
+
+    "WEATHER": {
+        "Title": "Météo bozjienne (Mise à jour en temps réel)",
+        "Type": "Type de météo",
+        "Et": "Heure éorzéenne",
+        "Lt": "Heure locale",
+        "FairSkies": "Temps clair",
+        "DustStorms": "Tempêtes de poussière",
+        "Rain": "Pluie",
+        "Wind": "Vent",
+        "Thunder": "Orage"
+    },
+
+    "TRACKER": {
+        "Title": "Tracker de Castrum Lacus Litore",
+        "ID_name" : "ID du Tracker",
+        "Time_before_respawn": "Temps restant avant le prochain Castrum",
+        "Sound_alert": "Me donner une alerte sonore 5 minutes avant",
+        "Reset": "Réinitialiser le Timer"
+    },
+
+    "TRACKER_CONFIRM": {
+        "Title": "Réinitialiser le Timer de Castrum",
+        "Description": "Quand a fini le dernier Castrum ?",
+        "Minutes": "Minutes avant",
+        "Warning": "Cette action est irréversible !",
+        "Ok_text": "Confirmer",
+        "Cancel_text": "Annuler"
+    },
+
+    "TRACKER_DESCRIPTION": {
+        "Title": "Conseils bozjien",
+        "New_instance": "Le temps de réapparition du Castrum est d'une heure. Si l'instance est nouvelle, le Castrum apparaitra une heure après le début de l'instance.",
+        "Respawn_rule": "Le Timer du Castrun en jeu se réinitialise SEULEMENT quand le Castrum en cours est complètement terminé (vous pouvez savoir que Castrum est terminé lorsqu'il n'apparait plus dans la fenêtre des affrontements en cours). À partir de là vous pouvez réinitialiser le Timer de Castrum sur le Tracker ♥"
+    },
+
+    "LOST_ACTIONS_PREFIX": {
+        "Title": "Titre",
+        "Type": "Type",
+        "Range": "Portée",
+        "Radius": "Rayon",
+        "Cast": "Lancement",
+        "Recast": "Recharge",
+        "Available": "Disponibilité",
+        "Description": "Description",
+        "Affinity": "Affinité"
+    },
+
+    "LOST_ACTIONS_LIST": {
+        "1": {
+            "Title": "Lost Focus",
+            "Type": "Ability",
+            "Range": "0y",
+            "Radius": "0y",
+            "Cast": "Instant",
+            "Recast": "2.50s",
+            "Available": "32",
+            "Description": "<p>Grant a stack of <div class='yellow'>Boost<div>, up to a maximum of 16.</p><p><div class='green'>Boost Bonus:</div> Increase potency of next weapon skill by 15% per stack.</p><p><div class='green'>Duration: 30s</div></p><p>Effect ends upon using another lost action.<br>Shares a recast timer with all other weaponskills and spells.</p>",
+            "Affinity": ["PLD", "MNK", "WAR", "DRG", "BRD", "WHM", "BLM", "SMN", "SCH", "NIN", "MCH", "DRK", "AST", "SAM", "RDM", "GNB", "DNC"]
+        }
+    }
+}

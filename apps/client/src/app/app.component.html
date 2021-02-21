@@ -4,9 +4,14 @@
       <img src="assets/img/bozjan-tracker-logo.png" alt="logo" class="brand-logo" />
       <h1 class="logo">{{ 'APP.Title' | translate }}</h1>
     </a>
-    <span nz-col nzSpan="12">
-      Eorzea Time: {{etTimer}}
-    </span>
+    <div nz-col nzSpan="12">
+      <nz-select nzSize="small" [(ngModel)]="language" (ngModelChange)="updateLanguage()">
+        <nz-option nzValue="en" nzLabel="English"></nz-option>
+        <nz-option nzValue="fr" nzLabel="Français"></nz-option>
+      </nz-select>
+      &nbsp; &nbsp;
+      <span>{{ 'WEATHER.Et' | translate }}: {{etTimer}}</span>
+    </div>
   </nz-header>
   <nz-content class="outer-content">
     <nz-layout class="inner-layout">
@@ -18,7 +23,7 @@
   <nz-footer>
     <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
       <div nz-col nzXs="24" nzLg="8">
-        FINAL FANTASY XIV ©2010 - 2020 SQUARE ENIX CO., LTD. FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd.
+        FINAL FANTASY XIV ©2010 - 2021 SQUARE ENIX CO., LTD. FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd.
       </div>
       <div nz-col nzXs="24" nzLg="8" class="center">
         Heavily inspired by <a href="https://ffxiv-eureka.com" target="_blank">https://ffxiv-eureka.com</a>

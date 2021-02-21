@@ -55,7 +55,12 @@
         "Title": "Bozjan Weather (Updated in Real Time)",
         "Type": "Weather Type",
         "Et": "Eorzea Time",
-        "Lt": "Locale Time"
+        "Lt": "Locale Time",
+        "FairSkies": "Fair Skies",
+        "DustStorms": "Dust Storms",
+        "Rain": "Rain",
+        "Wind": "Wind",
+        "Thunder": "Thunder"
     },
 
     "TRACKER": {
