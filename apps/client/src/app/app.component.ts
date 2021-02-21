@@ -16,10 +16,12 @@ export class AppComponent implements OnInit {
   public language= navigator.language;
 
   constructor(private translate: TranslateService) {
-    if (navigator.language === 'en-US' || navigator.language === 'en-US') {
+    if (navigator.language === 'en-US' || navigator.language === 'en-US' || navigator.language === 'en') {
       this.language = 'en';
-    } else if (navigator.language === 'fr-FR')  {
+    } else if (navigator.language === 'fr-FR' || navigator.language === 'fr')  {
       this.language = 'fr';
+    } else {
+      this.language = 'en';
     }
     translate.setDefaultLang(this.language);
   }
