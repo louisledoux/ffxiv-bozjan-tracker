@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   public language= navigator.language;
 
   constructor(private translate: TranslateService) {
-    if (navigator.language === 'en-US' || 'en-GB') {
+    if (navigator.language === 'en-US' || navigator.language === 'en-US') {
       this.language = 'en';
     } else if (navigator.language === 'fr-FR')  {
       this.language = 'fr';
