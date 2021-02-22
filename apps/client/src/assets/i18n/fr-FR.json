@@ -56,11 +56,11 @@
         "Type": "Type de météo",
         "Et": "Heure éorzéenne",
         "Lt": "Heure locale",
-        "FairSkies": "Temps clair",
+        "FairSkies": "Clair",
         "DustStorms": "Tempêtes de poussière",
         "Rain": "Pluie",
         "Wind": "Vent",
-        "Thunder": "Orage"
+        "Thunder": "Orages"
     },
 
     "TRACKER": {
