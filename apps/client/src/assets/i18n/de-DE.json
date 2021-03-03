@@ -1,0 +1,117 @@
+{
+    "APP": {
+        "Title": "Bozjan Toolkit",
+        "Description": "Kein offizielles FFXIV Tool",
+        "Support": "Willst du mir helfen?"
+    },
+
+    "HOMEPAGE_CARD": {
+        "Tracker_input_placeholder" : "Eingabe der Tracker ID",
+        "Tracker_input_button": "Eingabe",
+        "Create_tracker": "Erstelle einen neuen Bozja Tracker",
+        "Lost_actions": "Verlorene Aktion",
+        "Wiki": "Wiki & Tipps",
+        "Weather": "Bozjan Wetter",
+        "Join_error": "Fehler: Dieser Tracker existiert nicht"
+    },
+
+    "MAP": {
+        "Title": "Bozjan Karte - Mit Position der Sterne Mobs"
+    },
+
+    "STARMOBS": {
+        "Title": "Respawn Timer der Sterne Mobs",
+        "TIDEBORN": {
+            "Name": "Blauengel"
+        },
+        "FERN": {
+            "Name": "Farnblüte"
+        },
+        "CLAW": {
+            "Name": "Tintenstachel"
+        },
+        "PSOGLAV": {
+            "Name": "Psoglav"
+        },
+        "VIY": {
+            "Name": "Wij"
+        },
+        "SMOK": {
+            "Name": "Smok"
+        },
+        "PATTY": {
+            "Name": "Patty"
+        },
+        "CLARE": {
+            "Name": "Klaudia die Klebrige"
+        },
+        "BARATHRUM": {
+            "Name": "Herz des Barathrum"
+        },
+        "RespawnText": "Nächster Auftritt in:",
+        "Reset": "Zurücksetzen"
+    },
+
+    "TRACKER": {
+        "Title": "Tracker für Castrum Lacus Litore",
+        "ID_name" : "Tracker ID",
+        "Time_before_respawn": "Verbleibende Zeit bis das nächste Castrum erscheint",
+        "Sound_alert": "Mach mich in 5 Minuten nochmal darauf aufmerksam",
+        "Reset": "Zurücksetzung des Timers"
+    },
+
+    "TRACKER_CONFIRM": {
+        "Title": "Zurücksetzen des Castrum Timers",
+        "Description": "Wann wurde das letzte Castrum beendet?",
+        "Minutes": "Vor Minuten",
+        "Warning": "Diese Aktion kann nicht rückgängig gemacht werden!",
+        "Ok_text": "Bestätigen",
+        "Cancel_text": "Abbruch"
+    },
+
+    "TRACKER_DESCRIPTION": {
+        "Title": "Bozjan Tipps",
+        "New_instance": "Castrum erscheint jede Stunde. Wenn die instance neu ist, wird das Castrum erst eine Stunde nach beginn der instance starten.",
+        "Respawn_rule": "Der in-game Castrum timer wird NUR zurückgesetzt, wenn das laufende Castrum voll abgeschlossen wurde (Du erkennst ein abgeschlossenes Castrum wenn es nicht mehr in der CE Registrierung erscheint). Nun kannst du den Timer zurücksetzen ♥",
+        "Starmobs": "Sternmonster erscheinen alle 30 Minuten."
+    },
+
+    "WEATHER": {
+        "Title": "Bozjan Wetter (Aktualisiert in echtZeit)",
+        "Type": "Wetter Typ",
+        "Et": "Eorzea Zeit",
+        "Lt": "Lokale Zeit",
+        "FairSkies": "Klarer Himmel",
+        "DustStorms": "Sandstrum",
+        "Rain": "Regen",
+        "Wind": "Wind",
+        "Thunder": "Gewitter"
+    },
+
+    "LOST_ACTIONS_PREFIX": {
+        "Title": "Titel",
+        "Type": "Typ",
+        "Range": "Reichweite",
+        "Radius": "Radius",
+        "Cast": "Cast",
+        "Recast": "Recast",
+        "Available": "Verfügbar",
+        "Description": "Beschreibung",
+        "Affinity": "Affinität"
+    },
+
+    "LOST_ACTIONS_LIST": {
+        "1": {
+            "Title": "Lost Focus",
+            "Type": "Ability",
+            "Range": "0y",
+            "Radius": "0y",
+            "Cast": "Instant",
+            "Recast": "2.50s",
+            "Available": "32",
+            "Description": "<p>Grant a stack of <div class='yellow'>Boost<div>, up to a maximum of 16.</p><p><div class='green'>Boost Bonus:</div> Increase potency of next weapon skill by 15% per stack.</p><p><div class='green'>Duration: 30s</div></p><p>Effect ends upon using another lost action.<br>Shares a recast timer with all other weaponskills and spells.</p>",
+            "Affinity": ["PLD", "MNK", "WAR", "DRG", "BRD", "WHM", "BLM", "SMN", "SCH", "NIN", "MCH", "DRK", "AST", "SAM", "RDM", "GNB", "DNC"],
+            "Category": "Offensive"
+        }
+    }
+}

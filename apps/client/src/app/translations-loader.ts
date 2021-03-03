@@ -7,6 +7,12 @@ export function getFilename(lang: string): string {
   switch (lang) {
     case 'fr':
       return 'fr-FR';
+    case 'de':
+      return 'de-DE';
+    case 'jp':
+      return 'jp-JP';
+    case 'ko':
+      return 'ko-KO';
     default:
       return 'en';
   }

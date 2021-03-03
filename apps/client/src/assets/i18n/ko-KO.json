@@ -1,0 +1,117 @@
+{
+    "APP": {
+        "Title": "보즈야 툴킷",
+        "Description": "비공식 파판14 도구",
+        "Support": "도움을 주고 싶으신가요?"
+    },
+
+    "HOMEPAGE_CARD": {
+        "Tracker_input_placeholder" : "트래커 ID 입력",
+        "Tracker_input_button": "등록",
+        "Create_tracker": "새로운 보즈야 트래커 생성",
+        "Lost_actions": "Lost Actions",
+        "Wiki": "위키 및 팁",
+        "Weather": "보즈야 날씨",
+        "Join_error": "오류: 그 트래커는 존재하지 않습니다."
+    },
+
+    "MAP": {
+        "Title": "보즈야 지도 - 특급 몬스터 위치 포함"
+    },
+
+    "STARMOBS": {
+        "Title": "특급 몬스터 재생성 타이머",
+        "TIDEBORN": {
+            "Name": "Tideborn Angel"
+        },
+        "FERN": {
+            "Name": "Fern Flower"
+        },
+        "CLAW": {
+            "Name": "Ink Claw"
+        },
+        "PSOGLAV": {
+            "Name": "Psoglav"
+        },
+        "VIY": {
+            "Name": "Viy"
+        },
+        "SMOK": {
+            "Name": "Smok"
+        },
+        "PATTY": {
+            "Name": "Patty"
+        },
+        "CLARE": {
+            "Name": "Clingy Clare"
+        },
+        "BARATHRUM": {
+            "Name": "Bird of Barathrum"
+        },
+        "RespawnText": "남은 재생성 시간:",
+        "Reset": "재설정"
+    },
+
+    "TRACKER": {
+        "Title": "카스트룸 라쿠스 리토르 트래커",
+        "ID_name" : "트래커 ID",
+        "Time_before_respawn": "다음 카스트룸 시작까지 남은 시간",
+        "Sound_alert": "시작 5분 전에 통보",
+        "Reset": "타이머 재설정"
+    },
+
+    "TRACKER_CONFIRM": {
+        "Title": "카스트룸 타이머 재설정",
+        "Description": "마지막 카스트룸이 언제 끝났습니까?",
+        "Minutes": "몇분 전",
+        "Warning": "이 작업은 되돌릴 수 없습니다!",
+        "Ok_text": "확인",
+        "Cancel_text": "취소"
+    },
+
+    "TRACKER_DESCRIPTION": {
+        "Title": "보즈야 팁",
+        "New_instance": "카스트룸은 매 시간마다 시작됩니다. 만약 이 인스턴스가 새로운 것이라면, 카스트룸은 인스턴스 시작 후 1시간뒤에 시작될 것입니다.",
+        "Respawn_rule": "인 게임 카스트룸 타이머는 오직 현재 진행중인 카스트룸이 완전히 끝났을 때 리셋될 것입니다. (카스트룸이 CE 등록 탭에서 완전히 사라진 때가 바로 이 순간입니다) 그 상황에서 타이머를 리셋하면 됩니다.",
+        "Starmobs": "특급 몬스터는 매 30분마다 재생성됩니다."
+    },
+
+    "WEATHER": {
+        "Title": "보즈야 날씨 (현실 시간에 따라 업데이트)",
+        "Type": "날씨 종류",
+        "Et": "에오르지아 시간",
+        "Lt": "현실 시간",
+        "FairSkies": "맑음",
+        "DustStorms": "모래폭풍",
+        "Rain": "비",
+        "Wind": "바람",
+        "Thunder": "번개"
+    },
+
+    "LOST_ACTIONS_PREFIX": {
+        "Title": "Title",
+        "Type": "Type",
+        "Range": "Range",
+        "Radius": "Radius",
+        "Cast": "Cast",
+        "Recast": "Recast",
+        "Available": "Available",
+        "Description": "Description",
+        "Affinity": "Affinity"
+    },
+
+    "LOST_ACTIONS_LIST": {
+        "LOST_FOCUS": {
+            "Title": "Lost Focus",
+            "Type": "Ability",
+            "Range": "0y",
+            "Radius": "0y",
+            "Cast": "Instant",
+            "Recast": "2.50s",
+            "Available": "32",
+            "Description": "<p>Grant a stack of <div class='yellow'>Boost<div>, up to a maximum of 16.</p><p><div class='green'>Boost Bonus:</div> Increase potency of next weapon skill by 15% per stack.</p><p><div class='green'>Duration: 30s</div></p><p>Effect ends upon using another lost action.<br>Shares a recast timer with all other weaponskills and spells.</p>",
+            "Affinity": ["PLD", "MNK", "WAR", "DRG", "BRD", "WHM", "BLM", "SMN", "SCH", "NIN", "MCH", "DRK", "AST", "SAM", "RDM", "GNB", "DNC"],
+            "Category": "Offensive"
+        }
+    }
+}

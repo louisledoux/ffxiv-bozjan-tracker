@@ -8,6 +8,9 @@
       <nz-select nzSize="small" [(ngModel)]="language" (ngModelChange)="updateLanguage()">
         <nz-option nzValue="en" nzLabel="English"></nz-option>
         <nz-option nzValue="fr" nzLabel="Français"></nz-option>
+        <nz-option nzValue="de" nzLabel="Deutsch"></nz-option>
+        <nz-option nzValue="jp" nzLabel="日本語 (WIP)"></nz-option>
+        <nz-option nzValue="ko" nzLabel="한국어 (WIP)"></nz-option>
       </nz-select>
       &nbsp; &nbsp;
       <span>{{ 'WEATHER.Et' | translate }}: {{etTimer}}</span>
@@ -29,7 +32,7 @@
         Heavily inspired by <a href="https://ffxiv-eureka.com" target="_blank">https://ffxiv-eureka.com</a>
       </div>
       <div nz-col nzXS="24" nzLg="6" class="center">
-        <a href='https://ko-fi.com/S6S63PVN4' target='_blank'><img height='30' style='border:0px;height:30px;' src='https://cdn.ko-fi.com/cdn/kofi5.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+        {{ 'APP.Support' | translate }} &nbsp; <a href='https://ko-fi.com/S6S63PVN4' target='_blank'><img height='30' style='border:0px;height:30px;' src='https://cdn.ko-fi.com/cdn/kofi5.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
       </div>
       <div nz-col nzXs="24" nzLg="4" class="right">
         <a href="https://github.com/louisledoux/ffxiv-bozjan-tracker" target="_blank">Version: Delubrum</a>

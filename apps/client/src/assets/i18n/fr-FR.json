@@ -1,14 +1,15 @@
 {
     "APP": {
         "Title": "Bozjan Toolkit",
-        "Description": "Un outil non-officiel FFXIV"
+        "Description": "Un outil non-officiel FFXIV",
+        "Support": "Envie de donner un coup de pouce ?"
     },
 
     "HOMEPAGE_CARD": {
         "Tracker_input_placeholder" : "Entrez l'ID du Tracker",
         "Tracker_input_button": "Entrer",
         "Create_tracker": "Créer un nouveau Tracker bozjien",
-        "Lost_actions": "Actions perdues",
+        "Lost_actions": "Actions oubliées",
         "Wiki": "Wiki & Conseils",
         "Weather": "Météo bozjienne",
         "Join_error": "Erreur : Ce Tracker n'existe pas"
@@ -51,18 +52,6 @@
         "Reset": "Réinitialiser"
     },
 
-    "WEATHER": {
-        "Title": "Météo bozjienne (Mise à jour en temps réel)",
-        "Type": "Type de météo",
-        "Et": "Heure éorzéenne",
-        "Lt": "Heure locale",
-        "FairSkies": "Clair",
-        "DustStorms": "Tempêtes de poussière",
-        "Rain": "Pluie",
-        "Wind": "Vent",
-        "Thunder": "Orages"
-    },
-
     "TRACKER": {
         "Title": "Tracker de Castrum Lacus Litore",
         "ID_name" : "ID du Tracker",
@@ -83,7 +72,20 @@
     "TRACKER_DESCRIPTION": {
         "Title": "Conseils bozjien",
         "New_instance": "Le temps de réapparition du Castrum est d'une heure. Si l'instance est nouvelle, le Castrum apparaitra une heure après le début de l'instance.",
-        "Respawn_rule": "Le Timer du Castrun en jeu se réinitialise SEULEMENT quand le Castrum en cours est complètement terminé (vous pouvez savoir que Castrum est terminé lorsqu'il n'apparait plus dans la fenêtre des affrontements en cours). À partir de là vous pouvez réinitialiser le Timer de Castrum sur le Tracker ♥"
+        "Respawn_rule": "Le Timer du Castrun en jeu se réinitialise SEULEMENT quand le Castrum en cours est complètement terminé (vous pouvez savoir que Castrum est terminé lorsqu'il n'apparait plus dans la fenêtre des affrontements en cours). À partir de là vous pouvez réinitialiser le Timer de Castrum sur le Tracker ♥",
+        "Starmobs": "Les monstres-étoiles réapparaissent toutes les 30 minutes."
+    },
+
+    "WEATHER": {
+        "Title": "Météo bozjienne (Mise à jour en temps réel)",
+        "Type": "Type de météo",
+        "Et": "Heure éorzéenne",
+        "Lt": "Heure locale",
+        "FairSkies": "Clair",
+        "DustStorms": "Tempêtes de poussière",
+        "Rain": "Pluie",
+        "Wind": "Vent",
+        "Thunder": "Orages"
     },
 
     "LOST_ACTIONS_PREFIX": {
@@ -108,7 +110,8 @@
             "Recast": "2.50s",
             "Available": "32",
             "Description": "<p>Grant a stack of <div class='yellow'>Boost<div>, up to a maximum of 16.</p><p><div class='green'>Boost Bonus:</div> Increase potency of next weapon skill by 15% per stack.</p><p><div class='green'>Duration: 30s</div></p><p>Effect ends upon using another lost action.<br>Shares a recast timer with all other weaponskills and spells.</p>",
-            "Affinity": ["PLD", "MNK", "WAR", "DRG", "BRD", "WHM", "BLM", "SMN", "SCH", "NIN", "MCH", "DRK", "AST", "SAM", "RDM", "GNB", "DNC"]
+            "Affinity": ["PLD", "MNK", "WAR", "DRG", "BRD", "WHM", "BLM", "SMN", "SCH", "NIN", "MCH", "DRK", "AST", "SAM", "RDM", "GNB", "DNC"],
+            "Category": "Offensive"
         }
     }
 }

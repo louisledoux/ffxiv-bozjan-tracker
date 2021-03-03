@@ -20,6 +20,12 @@ export class AppComponent implements OnInit {
       this.language = 'en';
     } else if (navigator.language === 'fr-FR' || navigator.language === 'fr')  {
       this.language = 'fr';
+    } else if (navigator.language === 'de-DE' || navigator.language === 'de') {
+      this.language = 'de';
+    } else if (navigator.language === 'jp-JP' || navigator.language === 'jp') {
+      this.language = 'jp';
+    } else if (navigator.language === 'kor' || navigator.language === 'ko') {
+      this.language = 'ko';
     } else {
       this.language = 'en';
     }

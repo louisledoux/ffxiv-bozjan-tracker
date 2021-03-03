@@ -1,52 +1,52 @@
 {
     "APP": {
-        "Title": "Bozjan Toolkit",
-        "Description": "An unofficial FFXIV Tool",
-        "Support": "Wanna support me?"
+        "Title": "ボズヤツールキット",
+        "Description": "非公式FFXIVウェブツール",
+        "Support": "後援したいんですか?"
     },
 
     "HOMEPAGE_CARD": {
-        "Tracker_input_placeholder" : "Enter Tracker ID",
-        "Tracker_input_button": "Enter",
-        "Create_tracker": "Create a new Bozjan Tracker",
-        "Lost_actions": "Lost Actions",
-        "Wiki": "Wiki & Tips",
-        "Weather": "Bozjan Weather",
-        "Join_error": "Error: This tracker doesn't exist"
+        "Tracker_input_placeholder" : "トラッカーIDを入力",
+        "Tracker_input_button": "確認",
+        "Create_tracker": "新規トラッカーID作成",
+        "Lost_actions": "ロストアクション",
+        "Wiki": "ウィキとチップ",
+        "Weather": "ボズヤ天気",
+        "Join_error": "エラー:当該トラッカーは存在しません。"
     },
 
     "MAP": {
-        "Title": "Bozjan Map - With Star Mobs Locations"
+        "Title": "ボズヤ地図"
     },
 
     "STARMOBS": {
         "Title": "Star Mobs Respawn Timers",
         "TIDEBORN": {
-            "Name": "Tideborn Angel"
+            "Name": "ブルーエンジェル"
         },
         "FERN": {
-            "Name": "Fern Flower"
+            "Name": "ファーンフラワー"
         },
         "CLAW": {
-            "Name": "Ink Claw"
+            "Name": "インククロウ"
         },
         "PSOGLAV": {
-            "Name": "Psoglav"
+            "Name": "ソーグラヴ"
         },
         "VIY": {
-            "Name": "Viy"
+            "Name": "ヴィイ"
         },
         "SMOK": {
-            "Name": "Smok"
+            "Name": "スモク"
         },
         "PATTY": {
-            "Name": "Patty"
+            "Name": "パティ"
         },
         "CLARE": {
-            "Name": "Clingy Clare"
+            "Name": "クリンギー・クレア"
         },
         "BARATHRUM": {
-            "Name": "Bird of Barathrum"
+            "Name": "バード・オブ・バラスルーム"
         },
         "RespawnText": "Next respawn in:",
         "Reset": "Reset"
@@ -54,9 +54,9 @@
 
     "TRACKER": {
         "Title": "Castrum Lacus Litore Tracker",
-        "ID_name" : "Tracker ID",
+        "ID_name" : "トラッカーID",
         "Time_before_respawn": "Time left before next Castrum spawn",
-        "Sound_alert": "Give me a sound alert 5 minutes before",
+        "Sound_alert": "Alert me 5 minutes before",
         "Reset": "Reset the Timer"
     },
 
@@ -77,31 +77,31 @@
     },
 
     "WEATHER": {
-        "Title": "Bozjan Weather (Updated in Real Time)",
-        "Type": "Weather Type",
+        "Title": "ボズヤ天気",
+        "Type": "天気",
         "Et": "Eorzea Time",
         "Lt": "Locale Time",
-        "FairSkies": "Fair Skies",
-        "DustStorms": "Dust Storms",
-        "Rain": "Rain",
-        "Wind": "Wind",
-        "Thunder": "Thunder"
+        "FairSkies": "晴れ",
+        "DustStorms": "砂塵",
+        "Rain": "雨",
+        "Wind": "風",
+        "Thunder": "雷"
     },
 
     "LOST_ACTIONS_PREFIX": {
-        "Title": "Title",
-        "Type": "Type",
-        "Range": "Range",
+        "Title": "Titel",
+        "Type": "Typ",
+        "Range": "Reichweite",
         "Radius": "Radius",
         "Cast": "Cast",
         "Recast": "Recast",
-        "Available": "Available",
-        "Description": "Description",
-        "Affinity": "Affinity"
+        "Available": "Verfügbar",
+        "Description": "Beschreibung",
+        "Affinity": "Affinität"
     },
 
     "LOST_ACTIONS_LIST": {
-        "LOST_FOCUS": {
+        "1": {
             "Title": "Lost Focus",
             "Type": "Ability",
             "Range": "0y",
