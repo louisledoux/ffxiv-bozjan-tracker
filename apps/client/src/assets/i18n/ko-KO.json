@@ -53,27 +53,27 @@
     },
 
     "TRACKER": {
-        "Title": "카스트룸 라쿠스 리토르 트래커",
+        "Title": "카스트룸 라쿠스리토레 트래커",
         "ID_name" : "트래커 ID",
-        "Time_before_respawn": "다음 카스트룸 시작까지 남은 시간",
-        "Sound_alert": "시작 5분 전에 통보",
+        "Time_before_respawn": "다음 공성전 시작까지 남은 시간",
+        "Sound_alert": "시작 5분 전에 알리기",
         "Reset": "타이머 재설정"
     },
 
     "TRACKER_CONFIRM": {
-        "Title": "카스트룸 타이머 재설정",
-        "Description": "마지막 카스트룸이 언제 끝났습니까?",
-        "Minutes": "몇분 전",
-        "Warning": "이 작업은 되돌릴 수 없습니다!",
+        "Title": "공성전 타이머 재설정",
+        "Description": "마지막 공성전이 언제 끝났나요?",
+        "Minutes": "분 전",
+        "Warning": "(이 작업은 되돌릴 수 없습니다!)",
         "Ok_text": "확인",
         "Cancel_text": "취소"
     },
 
     "TRACKER_DESCRIPTION": {
         "Title": "보즈야 팁",
-        "New_instance": "카스트룸은 매 시간마다 시작됩니다. 만약 이 인스턴스가 새로운 것이라면, 카스트룸은 인스턴스 시작 후 1시간뒤에 시작될 것입니다.",
-        "Respawn_rule": "인 게임 카스트룸 타이머는 오직 현재 진행중인 카스트룸이 완전히 끝났을 때 리셋될 것입니다. (카스트룸이 CE 등록 탭에서 완전히 사라진 때가 바로 이 순간입니다) 그 상황에서 타이머를 리셋하면 됩니다.",
-        "Starmobs": "특급 몬스터는 매 30분마다 재생성됩니다."
+        "New_instance": "카스트룸 라쿠스리토레는 인스턴스가 열리고 1시간 간격으로 시작됩니다.",
+        "Respawn_rule": "다음 공성전이 열릴 시간은 지금 진행 중인 공성전이 완전히 끝났을 때로부터 정해집니다. (공성전이 보즈야 임무 찾기에서 사라진 순간입니다) 그 때 타이머를 리셋하면 됩니다.",
+        "Starmobs": "✩이 붙은 몬스터는 30분마다 리스폰됩니다."
     },
 
     "WEATHER": {
@@ -89,25 +89,25 @@
     },
 
     "LOST_ACTIONS_PREFIX": {
-        "Title": "Title",
-        "Type": "Type",
-        "Range": "Range",
-        "Radius": "Radius",
-        "Cast": "Cast",
-        "Recast": "Recast",
-        "Available": "Available",
-        "Description": "Description",
-        "Affinity": "Affinity"
+        "Title": "이름",
+        "Type": "타입",
+        "Range": "거리",
+        "Radius": "범위",
+        "Cast": "시전 시간",
+        "Recast": "재사용",
+        "Available": "횟수",
+        "Description": "설명",
+        "Affinity": "사용 적성"
     },
 
     "LOST_ACTIONS_LIST": {
         "LOST_FOCUS": {
             "Title": "Lost Focus",
             "Type": "Ability",
-            "Range": "0y",
-            "Radius": "0y",
-            "Cast": "Instant",
-            "Recast": "2.50s",
+            "Range": "0m",
+            "Radius": "0m",
+            "Cast": "즉시 발동",
+            "Recast": "2.50초",
             "Available": "32",
             "Description": "<p>Grant a stack of <div class='yellow'>Boost<div>, up to a maximum of 16.</p><p><div class='green'>Boost Bonus:</div> Increase potency of next weapon skill by 15% per stack.</p><p><div class='green'>Duration: 30s</div></p><p>Effect ends upon using another lost action.<br>Shares a recast timer with all other weaponskills and spells.</p>",
             "Affinity": ["PLD", "MNK", "WAR", "DRG", "BRD", "WHM", "BLM", "SMN", "SCH", "NIN", "MCH", "DRK", "AST", "SAM", "RDM", "GNB", "DNC"],
