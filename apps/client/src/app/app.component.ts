@@ -22,9 +22,9 @@ export class AppComponent implements OnInit {
       this.language = 'fr';
     } else if (navigator.language === 'de-DE' || navigator.language === 'de') {
       this.language = 'de';
-    } else if (navigator.language === 'jp-JP' || navigator.language === 'jp') {
-      this.language = 'jp';
-    } else if (navigator.language === 'kor' || navigator.language === 'ko') {
+    } else if (navigator.language === 'ja-JP' || navigator.language === 'jp') {
+      this.language = 'ja';
+    } else if (navigator.language === 'ko-KR' || navigator.language === 'ko') {
       this.language = 'ko';
     } else {
       this.language = 'en';

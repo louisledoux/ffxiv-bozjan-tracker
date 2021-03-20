@@ -9,10 +9,10 @@ export function getFilename(lang: string): string {
       return 'fr-FR';
     case 'de':
       return 'de-DE';
-    case 'jp':
-      return 'jp-JP';
+    case 'ja':
+      return 'ja-JP';
     case 'ko':
-      return 'ko-KO';
+      return 'ko-KR';
     default:
       return 'en';
   }
