@@ -1,22 +1,22 @@
 {
     "APP": {
         "Title": "보즈야 툴킷",
-        "Description": "비공식 파판14 도구",
+        "Description": "FF14 비공식 도구",
         "Support": "도움을 주고 싶으신가요?"
     },
 
     "HOMEPAGE_CARD": {
         "Tracker_input_placeholder" : "트래커 ID 입력",
         "Tracker_input_button": "등록",
-        "Create_tracker": "새로운 보즈야 트래커 생성",
-        "Lost_actions": "Lost Actions",
+        "Create_tracker": "새로운 트래커 생성",
+        "Lost_actions": "로스트 액션",
         "Wiki": "위키 및 팁",
         "Weather": "보즈야 날씨",
-        "Join_error": "오류: 그 트래커는 존재하지 않습니다."
+        "Join_error": "오류: 존재하지 않는 트래커 ID입니다."
     },
 
     "MAP": {
-        "Title": "보즈야 지도 - 특급 몬스터 위치 포함"
+        "Title": "보즈야 지도 (✩ 몬스터 위치 포함)"
     },
 
     "STARMOBS": {
@@ -48,7 +48,7 @@
         "BARATHRUM": {
             "Name": "Bird of Barathrum"
         },
-        "RespawnText": "남은 재생성 시간:",
+        "RespawnText": "남은 리스폰 시간:",
         "Reset": "재설정"
     },
 
@@ -64,7 +64,7 @@
         "Title": "공성전 타이머 재설정",
         "Description": "마지막 공성전이 언제 끝났나요?",
         "Minutes": "분 전",
-        "Warning": "(이 작업은 되돌릴 수 없습니다!)",
+        "Warning": "(이 작업은 되돌릴 수 없습니다)",
         "Ok_text": "확인",
         "Cancel_text": "취소"
     },
