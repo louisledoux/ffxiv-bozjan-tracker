@@ -9,7 +9,7 @@
         "Tracker_input_placeholder" : "트래커 ID 입력",
         "Tracker_input_button": "등록",
         "Create_tracker": "새로운 보즈야 트래커 생성",
-        "Lost_actions": "Lost Actions",
+        "Lost_actions": "로스트 액션",
         "Wiki": "위키 및 팁",
         "Weather": "보즈야 날씨",
         "Join_error": "오류: 그 트래커는 존재하지 않습니다."
@@ -22,31 +22,31 @@
     "STARMOBS": {
         "Title": "특급 몬스터 재생성 타이머",
         "TIDEBORN": {
-            "Name": "Tideborn Angel"
+            "Name": "푸른 천사"
         },
         "FERN": {
-            "Name": "Fern Flower"
+            "Name": "양치꽃"
         },
         "CLAW": {
-            "Name": "Ink Claw"
+            "Name": "먹물발톱"
         },
         "PSOGLAV": {
-            "Name": "Psoglav"
+            "Name": "프소글라브"
         },
         "VIY": {
-            "Name": "Viy"
+            "Name": "비이"
         },
         "SMOK": {
-            "Name": "Smok"
+            "Name": "스모크"
         },
         "PATTY": {
-            "Name": "Patty"
+            "Name": "패티"
         },
         "CLARE": {
-            "Name": "Clingy Clare"
+            "Name": "끈끈한 클레어"
         },
         "BARATHRUM": {
-            "Name": "Bird of Barathrum"
+            "Name": "구렁텅이새"
         },
         "RespawnText": "남은 재생성 시간:",
         "Reset": "재설정"
